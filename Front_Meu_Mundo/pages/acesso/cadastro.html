@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crie sua conta no Meu Mundo e descubra um espaço para aprender e crescer.">
+
+    <title>Criar conta | Meu Mundo!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/auth.css">
+</head>
+
+<body class="pagina-acesso">
+
+    <main class="acesso-container cadastro-container">
+
+        <!-- PAINEL DE APRESENTAÇÃO -->
+        <section class="painel-marca">
+            <div class="marca-conteudo">
+
+                <img
+                    src="../../assets/logo/logo_meu_mundo.jpg"
+                    alt="Logo Meu Mundo"
+                    class="logo-login"
+                >
+
+                <span class="etiqueta-marca">SEJA BEM-VINDO!</span>
+
+                <h1>
+                    Seu mundo.
+                    <br>
+                    Seu jeito de aprender.
+                </h1>
+
+                <p>
+                    Cada pessoa tem seu próprio ritmo,
+                    suas habilidades e uma maneira especial
+                    de descobrir o mundo.
+                </p>
+
+                <div class="mensagem-marca">
+                    <span>🌈</span>
+                    <p>Respeitando cada mente e celebrando cada conquista.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PAINEL DE CADASTRO -->
+        <section class="painel-login">
+
+            <div class="controles-aparencia">
+                <span>Aparência</span>
+
+                <button type="button" data-tema="claro" aria-label="Tema claro">☀️</button>
+                <button type="button" data-tema="escuro" aria-label="Tema escuro">🌙</button>
+                <button type="button" data-tema="contraste" aria-label="Alto contraste">◐</button>
+            </div>
+
+            <div class="cadastro-conteudo">
+
+                <span class="etiqueta">✨ VAMOS COMEÇAR?</span>
+
+                <h2>Crie sua conta!</h2>
+
+                <p class="subtitulo">
+                    Preencha seus dados para entrar no Meu Mundo.
+                </p>
+
+                <form id="formCadastro" novalidate>
+
+                    <div class="campo-grupo">
+                        <label for="nome">Nome completo</label>
+                        <input
+                            class="campo-input"
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome completo"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="apelido">Como deseja ser chamado(a)?</label>
+                        <input
+                            class="campo-input"
+                            type="text"
+                            id="apelido"
+                            name="apelido"
+                            placeholder="Digite seu apelido"
+                            maxlength="30"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="email">E-mail</label>
+                        <input
+                            class="campo-input"
+                            type="email"
+                            id="emailCadastro"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="perfil">Qual é o seu perfil?</label>
+
+                        <select
+                            class="campo-input"
+                            id="perfil"
+                            name="perfil"
+                            required
+                        >
+                            <option value="">Selecione seu perfil</option>
+                            <option value="crianca">🧸 Criança neurodivergente</option>
+                            <option value="adulto">🌱 Adulto neurodivergente</option>
+                            <option value="responsavel">💛 Responsável</option>
+                            <option value="profissional">🩺 Profissional</option>
+                            <option value="clinica">🏥 Clínica</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="senhaCadastro">Senha</label>
+
+                        <div class="campo-senha">
+                            <input
+                                class="campo-input"
+                                type="password"
+                                id="senhaCadastro"
+                                name="senha"
+                                placeholder="Crie uma senha"
+                                autocomplete="new-password"
+                                minlength="8"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="botao-visualizar"
+                                data-visualizar="senhaCadastro"
+                                aria-label="Mostrar senha"
+                            >👁️</button>
+                        </div>
+
+                        <small class="ajuda-campo">
+                            Utilize pelo menos 8 caracteres.
+                        </small>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="confirmarSenha">Confirmar senha</label>
+
+                        <div class="campo-senha">
+                            <input
+                                class="campo-input"
+                                type="password"
+                                id="confirmarSenha"
+                                name="confirmarSenha"
+                                placeholder="Digite a senha novamente"
+                                autocomplete="new-password"
+                                minlength="8"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="botao-visualizar"
+                                data-visualizar="confirmarSenha"
+                                aria-label="Mostrar confirmação de senha"
+                            >👁️</button>
+                        </div>
+                    </div>
+
+                    <label class="aceite-termos">
+                        <input type="checkbox" id="aceiteTermos" required>
+                        <span>
+                            Li e concordo com os
+                            <a href="#" id="linkTermos">termos de uso</a>
+                            e a
+                            <a href="#" id="linkPrivacidade">política de privacidade</a>.
+                        </span>
+                    </label>
+
+                    <div
+                        id="mensagemCadastro"
+                        class="mensagem-formulario"
+                        role="alert"
+                        aria-live="polite"
+                    ></div>
+
+                    <button
+                        type="submit"
+                        class="botao-entrar"
+                        id="botaoCadastrar"
+                    >
+                        Criar minha conta →
+                    </button>
+
+                </form>
+
+                <div class="divisor-acesso">
+                    <span>JÁ POSSUI UMA CONTA?</span>
+                </div>
+
+                <a href="login.html" class="botao-cadastro">
+                    Voltar para o login
+                </a>
+
+                <footer class="rodape-acesso">
+                    🌈 Meu Mundo! — Um espaço para todas as mentes.
+                </footer>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../../JS/auth.js"></script>
+
+</body>
+</html>

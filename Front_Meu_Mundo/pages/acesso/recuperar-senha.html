@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Recupere seu acesso ao Meu Mundo.">
+
+    <title>Recuperar senha | Meu Mundo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/auth.css">
+</head>
+
+<body class="pagina-recuperacao">
+
+    <main class="container-autenticacao">
+
+        <!-- PAINEL INSTITUCIONAL -->
+        <section class="painel-apresentacao">
+
+            <div class="logo-recuperacao">
+                <img
+                    src="../../assets/logo/logo_meu_mundo.jpg"
+                    alt="Logo Meu Mundo"
+                >
+            </div>
+
+            <span class="etiqueta-acesso">
+                🌈 ESTAMOS AQUI PARA AJUDAR!
+            </span>
+
+            <h1>
+                Vamos encontrar
+                <span>seu caminho de volta.</span>
+            </h1>
+
+            <p>
+                Não se preocupe! Esquecer uma senha acontece.
+                Vamos ajudar você a recuperar seu acesso
+                ao Meu Mundo.
+            </p>
+
+            <div class="mensagem-acolhimento">
+                <span>💙</span>
+                <strong>
+                    Cada passo é importante.
+                    Estamos juntos nessa jornada!
+                </strong>
+            </div>
+
+        </section>
+
+        <!-- PAINEL DE RECUPERAÇÃO -->
+        <section class="painel-formulario">
+
+            <div class="controles-aparencia">
+                <span>Aparência</span>
+
+                <button
+                    type="button"
+                    class="botao-tema"
+                    id="temaClaro"
+                    aria-label="Ativar tema claro"
+                >
+                    ☀️
+                </button>
+
+                <button
+                    type="button"
+                    class="botao-tema"
+                    id="temaEscuro"
+                    aria-label="Ativar tema escuro"
+                >
+                    🌙
+                </button>
+            </div>
+
+            <div class="conteudo-formulario">
+
+                <span class="etiqueta-acesso">
+                    ✨ RECUPERAÇÃO DE ACESSO
+                </span>
+
+                <h2>Esqueceu sua senha?</h2>
+
+                <p class="descricao-formulario">
+                    Informe o e-mail utilizado no seu cadastro.
+                    Vamos verificar o endereço para continuar.
+                </p>
+
+                <form id="formRecuperarSenha">
+
+                    <div class="campo-formulario">
+
+                        <label for="emailRecuperacao">
+                            E-mail
+                        </label>
+
+                        <div class="campo-com-icone">
+                            <span>✉️</span>
+
+                            <input
+                                type="email"
+                                id="emailRecuperacao"
+                                name="email"
+                                placeholder="Digite seu e-mail"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+                    <div
+                        id="mensagemRecuperacao"
+                        class="mensagem-formulario"
+                        role="status"
+                        aria-live="polite"
+                    ></div>
+
+                    <button
+                        type="submit"
+                        class="botao-autenticacao"
+                        id="botaoRecuperar"
+                    >
+                        Verificar meu e-mail →
+                    </button>
+
+                </form>
+
+                <div class="divisor-acesso">
+                    <span>OU</span>
+                </div>
+
+                <a
+                    href="login.html"
+                    class="botao-voltar-login"
+                >
+                    ← Voltar para o login
+                </a>
+
+                <p class="rodape-autenticacao">
+                    🌈 Meu Mundo! — Um espaço para todas as mentes.
+                </p>
+
+                <p class="aviso-demonstrativo">
+                    Protótipo demonstrativo de aprendizagem inclusiva.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../../JS/auth.js"></script>
+
+</body>
+</html>

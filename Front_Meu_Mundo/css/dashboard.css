@@ -1,0 +1,438 @@
+
+/* =====================================================
+   MEU MUNDO — PAINEL INICIAL
+   Arquivo: css/dashboard.css
+   ===================================================== */
+
+/* CABEÇALHO */
+
+.cabecalho {
+    width: 100%;
+    min-height: 76px;
+    padding: 12px 7%;
+    background: var(--cor-superficie);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    box-shadow: var(--sombra-suave);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    font-weight: 900;
+    color: var(--cor-azul);
+}
+
+.logo-icone {
+    font-size: 35px;
+}
+
+.exclamacao {
+    color: var(--cor-laranja);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-size: 14px;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: var(--cor-azul-claro);
+}
+
+.botao-perfil {
+    border: none;
+    background: #EAF3FF;
+    color: var(--cor-azul);
+    padding: 12px 20px;
+    border-radius: var(--raio-total);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.botao-perfil:hover {
+    background: #DCEBFA;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    width: 86%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+/* BOAS-VINDAS */
+
+.boas-vindas {
+    min-height: 300px;
+    padding: 40px 50px;
+    background: linear-gradient(
+        120deg,
+        #E8F2FF,
+        #F1EAFE
+    );
+    border-radius: var(--raio-grande);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.texto-boas-vindas {
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+.etiqueta {
+    display: inline-block;
+    background: #FFFFFF;
+    color: var(--cor-roxo);
+    padding: 8px 15px;
+    border-radius: var(--raio-total);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+.texto-boas-vindas h1 {
+    font-size: clamp(30px, 4vw, 40px);
+    line-height: 1.2;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.texto-boas-vindas h1 span {
+    color: var(--cor-laranja);
+}
+
+.texto-boas-vindas p {
+    max-width: 520px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 22px;
+}
+
+.botao-principal {
+    background: var(--cor-azul);
+    color: #FFFFFF;
+    border: none;
+    padding: 13px 25px;
+    min-height: 46px;
+    border-radius: var(--raio-total);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(108, 159, 232, 0.22);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.botao-principal:hover {
+    transform: translateY(-2px);
+    background: #568DDC;
+}
+
+/* ILUSTRAÇÃO */
+
+.ilustracao {
+    width: 250px;
+    height: 200px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.sol {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 55px;
+}
+
+.arco-iris {
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    font-size: 125px;
+}
+
+.nuvem {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    font-size: 45px;
+}
+
+.estrela {
+    position: absolute;
+    top: 25px;
+    left: 95px;
+    font-size: 30px;
+}
+
+/* FUNCIONALIDADES */
+
+.secao-funcionalidades {
+    margin-top: 42px;
+}
+
+.titulo-secao {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.titulo-secao > span {
+    font-size: 34px;
+}
+
+.titulo-secao h2 {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.titulo-secao p {
+    color: var(--cor-texto-secundario);
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+.grade-cartoes {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.cartao {
+    background: #FFFFFF;
+    border-radius: var(--raio-grande);
+    padding: 23px 18px;
+    min-height: 205px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid var(--cor-borda);
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cartao:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-card);
+}
+
+.icone-cartao {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.cartao h3 {
+    font-size: 17px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.cartao p {
+    color: var(--cor-texto-secundario);
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.cartao a {
+    margin-top: auto;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 900;
+    color: var(--cor-azul);
+}
+
+.cartao a:hover {
+    text-decoration: underline;
+}
+
+.cartao-rotina {
+    border-top: 4px solid var(--cor-azul-claro);
+}
+
+.cartao-atividades {
+    border-top: 4px solid var(--cor-roxo);
+}
+
+.cartao-tempo {
+    border-top: 4px solid var(--cor-laranja);
+}
+
+.cartao-emocoes {
+    border-top: 4px solid #F5AFCB;
+}
+
+/* CONQUISTAS */
+
+.secao-progresso {
+    margin-top: 38px;
+    padding: 28px 32px;
+    background: #FFF7E5;
+    border-radius: var(--raio-grande);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.secao-progresso h2 {
+    font-size: 21px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.secao-progresso p {
+    color: var(--cor-texto-secundario);
+    font-size: 13px;
+    line-height: 1.7;
+    max-width: 550px;
+}
+
+.conquista {
+    min-width: 200px;
+    background: #FFFFFF;
+    padding: 18px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    text-align: center;
+}
+
+.conquista span {
+    font-size: 35px;
+}
+
+.conquista strong {
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.conquista small {
+    color: var(--cor-texto-secundario);
+    font-size: 11px;
+}
+
+/* RODAPÉ */
+
+.rodape {
+    background: #FFFFFF;
+    padding: 20px 15px;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid var(--cor-borda);
+}
+
+.rodape p {
+    color: var(--cor-texto-secundario);
+    font-size: 12px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1000px) {
+    .grade-cartoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ilustracao {
+        transform: scale(0.85);
+    }
+
+    .menu {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 700px) {
+    .cabecalho {
+        flex-wrap: wrap;
+        padding: 15px 5%;
+    }
+
+    .menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    main {
+        width: 92%;
+        margin-top: 25px;
+    }
+
+    .boas-vindas {
+        padding: 30px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ilustracao {
+        align-self: center;
+        margin-top: 10px;
+    }
+
+    .secao-progresso {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 25px 20px;
+    }
+
+    .conquista {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 21px;
+    }
+
+    .botao-perfil {
+        padding: 10px 13px;
+    }
+
+    .grade-cartoes {
+        grid-template-columns: 1fr;
+    }
+
+    .texto-boas-vindas h1 {
+        font-size: 28px;
+    }
+
+    .ilustracao {
+        transform: scale(0.85);
+        transform-origin: left center;
+    }
+}

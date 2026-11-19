@@ -1,0 +1,345 @@
+
+/* =====================================================
+   MEU MUNDO — IDENTIDADE VISUAL GLOBAL
+   Arquivo: css/global.css
+   ===================================================== */
+
+/* 1. CORES E VARIÁVEIS GLOBAIS */
+
+:root {
+    /* Cores principais */
+    --cor-azul: #174F86;
+    --cor-azul-claro: #35A6C8;
+    --cor-verde: #79BD62;
+    --cor-laranja: #F28B35;
+    --cor-roxo: #A64C9C;
+    --cor-amarelo: #F2C94C;
+
+    /* Cores de interface */
+    --cor-fundo: #F4F8FC;
+    --cor-superficie: #FFFFFF;
+    --cor-texto: #263B52;
+    --cor-texto-secundario: #64748B;
+    --cor-borda: #E3EAF2;
+
+    /* Estados */
+    --cor-sucesso: #32865A;
+    --cor-alerta: #B7791F;
+    --cor-erro: #C44949;
+    --cor-info: #2879B9;
+
+    /* Tipografia */
+    --fonte-principal: "Nunito", "Segoe UI", sans-serif;
+
+    --texto-pequeno: 0.875rem;
+    --texto-normal: 1rem;
+    --texto-medio: 1.125rem;
+    --titulo-pequeno: 1.25rem;
+    --titulo-medio: 1.75rem;
+    --titulo-grande: 2.25rem;
+
+    /* Espaçamentos */
+    --espaco-1: 0.25rem;
+    --espaco-2: 0.5rem;
+    --espaco-3: 0.75rem;
+    --espaco-4: 1rem;
+    --espaco-5: 1.5rem;
+    --espaco-6: 2rem;
+
+    /* Bordas */
+    --raio-pequeno: 8px;
+    --raio-medio: 14px;
+    --raio-grande: 22px;
+    --raio-total: 999px;
+
+    /* Sombras */
+    --sombra-suave: 0 3px 12px rgba(23, 79, 134, 0.06);
+    --sombra-card: 0 6px 22px rgba(23, 79, 134, 0.08);
+
+    /* Layout */
+    --largura-conteudo: 1200px;
+    --altura-cabecalho: 76px;
+}
+
+/* 2. RESET E PADRONIZAÇÃO */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--fonte-principal);
+    font-size: var(--texto-normal);
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* 3. TIPOGRAFIA */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--cor-azul);
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+h1 {
+    font-size: var(--titulo-grande);
+}
+
+h2 {
+    font-size: var(--titulo-medio);
+}
+
+h3 {
+    font-size: var(--titulo-pequeno);
+}
+
+p {
+    color: var(--cor-texto-secundario);
+}
+
+/* 4. CONTAINER GLOBAL */
+
+.container {
+    width: min(100% - 40px, var(--largura-conteudo));
+    margin-inline: auto;
+}
+
+/* 5. CABEÇALHO */
+
+.cabecalho {
+    width: 100%;
+    min-height: var(--altura-cabecalho);
+    background-color: var(--cor-superficie);
+    border-bottom: 1px solid var(--cor-borda);
+    box-shadow: var(--sombra-suave);
+}
+
+.cabecalho-conteudo {
+    width: min(100% - 40px, var(--largura-conteudo));
+    min-height: var(--altura-cabecalho);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--espaco-4);
+}
+
+/* 6. CARTÕES */
+
+.card {
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-grande);
+    padding: var(--espaco-5);
+    box-shadow: var(--sombra-suave);
+}
+
+.card-interativo {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (hover: hover) {
+    .card-interativo:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--sombra-card);
+    }
+}
+
+/* 7. BOTÕES */
+
+.botao {
+    min-height: 44px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--raio-total);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--espaco-2);
+    font-weight: 800;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.botao-principal {
+    color: #FFFFFF;
+    background-color: var(--cor-azul);
+}
+
+.botao-principal:hover {
+    background-color: #103D6A;
+}
+
+.botao-secundario {
+    color: var(--cor-azul);
+    background-color: #EAF3FB;
+}
+
+.botao-secundario:hover {
+    background-color: #DCEBFA;
+}
+
+/* 8. CAMPOS DE FORMULÁRIO */
+
+.campo {
+    width: 100%;
+    min-height: 46px;
+    padding: 11px 14px;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-medio);
+    background-color: var(--cor-superficie);
+    color: var(--cor-texto);
+    outline: none;
+}
+
+.campo:focus {
+    border-color: var(--cor-azul-claro);
+    box-shadow: 0 0 0 3px rgba(53, 166, 200, 0.15);
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+/* 9. ACESSIBILIDADE E NAVEGAÇÃO */
+
+:focus-visible {
+    outline: 3px solid var(--cor-azul-claro);
+    outline-offset: 3px;
+}
+
+::selection {
+    color: #FFFFFF;
+    background-color: var(--cor-azul);
+}
+
+.somente-leitor {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* 10. PREFERÊNCIAS DE ACESSIBILIDADE */
+
+html[data-tamanho-fonte="grande"] {
+    font-size: 18px;
+}
+
+html[data-tamanho-fonte="pequena"] {
+    font-size: 14px;
+}
+
+html[data-contraste="alto"] {
+    --cor-fundo: #FFFFFF;
+    --cor-superficie: #FFFFFF;
+    --cor-texto: #000000;
+    --cor-texto-secundario: #292929;
+    --cor-borda: #555555;
+    --cor-azul: #003366;
+}
+
+html[data-animacoes="reduzidas"] *,
+html[data-animacoes="desativadas"] * {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+}
+
+html[data-animacoes="desativadas"] * {
+    animation: none !important;
+}
+
+/* 11. RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+    :root {
+        --altura-cabecalho: 68px;
+        --titulo-grande: 1.8rem;
+        --titulo-medio: 1.4rem;
+    }
+
+    .container {
+        width: min(100% - 28px, var(--largura-conteudo));
+    }
+
+    .cabecalho-conteudo {
+        width: min(100% - 28px, var(--largura-conteudo));
+    }
+
+    .card {
+        padding: var(--espaco-4);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --titulo-grande: 1.6rem;
+    }
+
+    .botao {
+        min-height: 46px;
+        width: 100%;
+    }
+}
+
+/* 12. RESPEITAR A PREFERÊNCIA DO SISTEMA */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

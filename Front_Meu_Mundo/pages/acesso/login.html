@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acesse o Meu Mundo, um espaço organizado para todas as mentes.">
+
+    <title>Entrar | Meu Mundo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/auth.css">
+</head>
+
+<body class="pagina-acesso">
+
+    <main class="acesso-container">
+
+        <!-- PAINEL DA IDENTIDADE DO MEU MUNDO -->
+        <section class="painel-marca">
+
+            <div class="marca-conteudo">
+
+                <img
+                    src="../../assets/logo/logo_meu_mundo.jpg"
+                    alt="Logo oficial Meu Mundo"
+                    class="logo-login"
+                >
+
+                <div class="marca-mensagem">
+                    <span class="marca-etiqueta">SEJA BEM-VINDO!</span>
+
+                    <h1>
+                        Seu mundo.<br>
+                        Seu jeito de aprender.
+                    </h1>
+
+                    <p>
+                        Um espaço acolhedor, inclusivo e organizado
+                        para descobrir, aprender e crescer.
+                    </p>
+                </div>
+
+                <div class="marca-destaque">
+                    <span>🌈</span>
+                    <p>Respeitando cada mente e celebrando cada conquista.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PAINEL DE LOGIN -->
+        <section class="painel-login">
+
+            <div class="login-conteudo">
+
+                <!-- CONFIGURAÇÕES VISUAIS -->
+                <div class="configuracoes-login">
+
+                    <span class="configuracoes-titulo">
+                        Aparência
+                    </span>
+
+                    <div class="opcoes-tema" aria-label="Escolher aparência">
+
+                        <button type="button"
+                            class="tema-botao"
+                            data-tema="claro"
+                            aria-label="Modo claro"
+                            title="Modo claro">
+                            ☀️
+                        </button>
+
+                        <button type="button"
+                            class="tema-botao"
+                            data-tema="escuro"
+                            aria-label="Modo escuro"
+                            title="Modo escuro">
+                            🌙
+                        </button>
+
+                        <button type="button"
+                            class="tema-botao"
+                            data-tema="contraste"
+                            aria-label="Alto contraste"
+                            title="Alto contraste">
+                            ◐
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="login-cabecalho">
+
+                    <span class="login-etiqueta">
+                        ✨ UM ESPAÇO FEITO PARA VOCÊ
+                    </span>
+
+                    <h2>Que bom ter você aqui!</h2>
+
+                    <p>
+                        Entre na sua conta para continuar
+                        sua jornada no Meu Mundo.
+                    </p>
+
+                </div>
+
+                <!-- FORMULÁRIO -->
+                <form id="formLogin" class="form-login">
+
+                    <div class="campo-grupo">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <div class="campo-input">
+
+                            <span aria-hidden="true">✉️</span>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Digite seu e-mail"
+                                autocomplete="username"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <div class="campo-grupo">
+
+                        <label for="senha">
+                            Senha
+                        </label>
+
+                        <div class="campo-input">
+
+                            <span aria-hidden="true">🔒</span>
+
+                            <input
+                                type="password"
+                                id="senha"
+                                name="senha"
+                                placeholder="Digite sua senha"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                id="mostrarSenha"
+                                class="botao-visualizar"
+                                aria-label="Mostrar senha"
+                                aria-pressed="false">
+                                👁️
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="opcoes-login">
+
+                        <label class="lembrar-login">
+                            <input type="checkbox" id="manterConectado">
+                            <span>Manter conectado</span>
+                        </label>
+
+                        <a href="recuperar-senha.html">
+                            Esqueci minha senha
+                        </a>
+
+                    </div>
+
+                    <p
+                        id="mensagemLogin"
+                        class="mensagem-login"
+                        role="alert"
+                        aria-live="polite">
+                    </p>
+
+                    <button
+                        type="submit"
+                        class="botao-entrar"
+                        id="botaoEntrar">
+                        Entrar no Meu Mundo
+                        <span aria-hidden="true">→</span>
+                    </button>
+
+                </form>
+
+                <div class="divisor-login">
+                    <span>AINDA NÃO TEM UMA CONTA?</span>
+                </div>
+
+                <a href="cadastro.html" class="botao-cadastro">
+                    Criar minha conta
+                </a>
+
+                <!-- ACESSO DEMONSTRATIVO -->
+                <details class="acesso-demo">
+
+                    <summary>
+                        Acesso demonstrativo para apresentação
+                    </summary>
+
+                    <p>
+                        Escolha um perfil para visualizar a navegação
+                        do protótipo.
+                    </p>
+
+                    <label for="perfilDemo">Perfil demonstrativo</label>
+
+                    <select id="perfilDemo">
+                        <option value="crianca">Criança</option>
+                        <option value="adulto">Adulto neurodivergente</option>
+                        <option value="responsavel">Responsável</option>
+                        <option value="profissional">Profissional</option>
+                        <option value="clinica">Clínica</option>
+                    </select>
+
+                    <button type="button" id="botaoDemo">
+                        Entrar para demonstração
+                    </button>
+
+                </details>
+
+                <footer class="login-rodape">
+                    <p>🌈 Meu Mundo! — Um espaço para todas as mentes.</p>
+                    <small>Protótipo demonstrativo de aprendizagem inclusiva.</small>
+                </footer>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../../JS/auth.js"></script>
+
+</body>
+</html>
