@@ -163,10 +163,6 @@ h1 {
   background: #FFF0D9;
 }
 
-.perfil-adulto .perfil-icone {
-  background: #E7F7ED;
-}
-
 .perfil-responsavel .perfil-icone {
   background: #FFF0F5;
 }
@@ -181,10 +177,6 @@ h1 {
 
 .perfil-root .perfil-icone {
   background: #EEF0FF;
-}
-
-.perfil-root {
-  border-color: #ded8fa;
 }
 
 .aviso-demo {

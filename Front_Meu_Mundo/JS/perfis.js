@@ -5,11 +5,6 @@ const perfis = {
     icone: "🧸",
     descricao: "Escolha seu avatar para entrar no seu espaço de descobertas."
   },
-  adulto: {
-    nome: "Adulto",
-    icone: "🌿",
-    descricao: "Entre no seu ambiente pessoal para organizar sua rotina e seus objetivos."
-  },
   responsavel: {
     nome: "Responsável pela criança",
     icone: "💛",
@@ -25,11 +20,6 @@ const perfis = {
     icone: "🏥",
     descricao: "Acesse a administração da clínica e de sua equipe."
   },
-  root: {
-    nome: "Administrador ROOT",
-    icone: "🛡️",
-    descricao: "Acesso administrativo geral e restrito da plataforma."
-  }
 };
 
 const boasVindas = document.getElementById("boasVindas");
