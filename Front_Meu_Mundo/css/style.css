@@ -63,6 +63,13 @@ body {
     font-size: 35px;
 }
 
+.logo-imagem {
+    display: block;
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+}
+
 .exclamacao {
     color: #FFB85C;
 }

@@ -6,14 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Escolha seu perfil para acessar o Meu Mundo.">
   <title>Meu Mundo! | Acesso</title>
-  <link rel="stylesheet" href="../css/global.css">
-  <link rel="stylesheet" href="../css/perfil.css">
-  <link rel="stylesheet" href="./index.html">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="stylesheet" href="../../css/perfil.css">
 </head>
 <body>
   <header class="topo">
     <a class="marca" href="#" id="inicioLink" aria-label="Meu Mundo - início">
-      <span class="marca-icone">🌈</span>
+      <span class="marca-icone"></span>
       <span>Meu Mundo<span class="ponto">!</span></span>
     </a>
     <span class="topo-legenda">Um espaço para cada jeito de aprender e crescer</span>
@@ -30,13 +29,6 @@
           <span class="perfil-icone">🧸</span>
           <strong>Criança</strong>
           <small>Um espaço para brincar e aprender</small>
-          <span class="tipo-acesso">Sem senha</span>
-        </button>
-
-        <button class="perfil perfil-adulto" data-role="adulto">
-          <span class="perfil-icone">🌿</span>
-          <strong>Adulto</strong>
-          <small>Organize sua rotina e seus objetivos</small>
           <span class="tipo-acesso">Sem senha</span>
         </button>
 
@@ -61,12 +53,13 @@
           <span class="tipo-acesso">E-mail e senha</span>
         </button>
 
-        <button class="perfil perfil-root" data-role="root">
-          <span class="perfil-icone">🛡️</span>
-          <strong>Administrador ROOT</strong>
-          <small>Administração geral da plataforma</small>
-          <span class="tipo-acesso">Acesso restrito</span>
+        <button class="perfil perfil-novo-cadastro" type="button" id="botaoNovoCadastro">
+          <span class="perfil-icone">✨</span>
+          <strong>Novo cadastro</strong>
+          <small>Ainda não possui uma conta? Comece por aqui.</small>
+          <span class="tipo-acesso tipo-cadastro">Criar conta →</span>
         </button>
+
       </div>
 
       <p class="aviso-demo">Versão demonstrativa: os acessos ainda não validam contas reais.</p>
@@ -82,6 +75,6 @@
     🌈 Meu Mundo! — Cada pessoa tem seu próprio jeito de aprender e crescer.
   </footer>
 
-  <script src="perfis.js"></script>
+  <script src="../../JS/perfis.js"></script>
 </body>
 </html>

@@ -194,8 +194,16 @@ function escapeHtml(value) {
   }[char]));
 }
 
-document.querySelectorAll(".perfil").forEach(botao => {
+document.querySelectorAll(".perfil[data-role]").forEach(botao => {
   botao.addEventListener("click", () => {
     abrirPerfil(botao.dataset.role);
   });
 });
+
+const botaoNovoCadastro = document.getElementById("botaoNovoCadastro");
+
+if (botaoNovoCadastro) {
+  botaoNovoCadastro.addEventListener("click", () => {
+    window.location.href = "cadastro.html";
+  });
+}

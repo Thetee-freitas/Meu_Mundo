@@ -163,10 +163,6 @@ h1 {
   background: #FFF0D9;
 }
 
-.perfil-responsavel .perfil-icone {
-  background: #FFF0F5;
-}
-
 .perfil-profissional .perfil-icone {
   background: #EAF3FF;
 }
@@ -175,8 +171,28 @@ h1 {
   background: #F0EAFE;
 }
 
-.perfil-root .perfil-icone {
-  background: #EEF0FF;
+.perfil-novo-cadastro .perfil-icone {
+  background: #EAF3FF;
+}
+
+.perfil-novo-cadastro {
+  border: 2px solid #DDE8FA;
+  background: linear-gradient(145deg, #FFFFFF 0%, #F4F8FF 100%);
+}
+
+.perfil-novo-cadastro:hover,
+.perfil-novo-cadastro:focus-visible {
+  border-color: var(--azul);
+  background: linear-gradient(145deg, #FFFFFF 0%, #EDF5FF 100%);
+}
+
+.perfil-novo-cadastro strong {
+  color: #405477;
+}
+
+.tipo-cadastro {
+  background: var(--azul);
+  color: #FFFFFF;
 }
 
 .aviso-demo {
