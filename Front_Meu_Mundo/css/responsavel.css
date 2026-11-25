@@ -1,0 +1,812 @@
+
+/* =========================================
+   MEU MUNDO - PERFIL DO RESPONSÁVEL
+========================================= */
+
+.pagina-responsavel {
+    margin: 0;
+    min-height: 100vh;
+    background: #f5f7fc;
+    color: #24466f;
+    font-family: 'Nunito', sans-serif;
+}
+
+.pagina-responsavel * {
+    box-sizing: border-box;
+}
+
+.layout-responsavel {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* MENU LATERAL */
+
+.sidebar-responsavel {
+    width: 265px;
+    min-width: 265px;
+    padding: 22px 17px;
+    background: #fff;
+    border-right: 1px solid #e6eaf2;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-responsavel {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 22px;
+}
+
+.logo-responsavel img {
+    width: 165px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.identificacao-responsavel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 10px;
+    background: #f3efff;
+    border-radius: 14px;
+    margin-bottom: 25px;
+}
+
+.avatar-responsavel {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    background: #e9ddff;
+    border-radius: 12px;
+    font-size: 21px;
+}
+
+.identificacao-responsavel strong,
+.identificacao-responsavel small {
+    display: block;
+}
+
+.identificacao-responsavel strong {
+    font-size: 13px;
+}
+
+.identificacao-responsavel small {
+    color: #8995aa;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+/* NAVEGAÇÃO */
+
+.menu-responsavel {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.menu-titulo {
+    padding: 0 10px;
+    margin-bottom: 7px;
+    color: #9aa6ba;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.menu-secundario {
+    margin-top: 24px;
+}
+
+.item-responsavel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 11px;
+    color: #65758e;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.item-responsavel span {
+    font-size: 18px;
+}
+
+.item-responsavel:hover {
+    background: #f4f0ff;
+    color: #7956b7;
+}
+
+.item-responsavel.ativo {
+    background: #eee9ff;
+    color: #7956b7;
+}
+
+/* MENSAGEM LATERAL */
+
+.mensagem-responsavel {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 17px;
+    margin-top: auto;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #f2eaff, #e9f5ff);
+}
+
+.mensagem-responsavel span {
+    font-size: 25px;
+}
+
+.mensagem-responsavel strong {
+    font-size: 12px;
+}
+
+.mensagem-responsavel small {
+    color: #72819a;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.sair-responsavel {
+    margin-top: 15px;
+    padding: 12px;
+    border: 1px solid #e8eaf0;
+    border-radius: 11px;
+    background: transparent;
+    color: #78859a;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.sair-responsavel:hover {
+    background: #fff0f0;
+    color: #cc5c65;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+.conteudo-responsavel {
+    flex: 1;
+    min-width: 0;
+    padding: 25px 35px;
+}
+
+.topbar-responsavel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.data-responsavel {
+    color: #8996ac;
+    font-size: 12px;
+}
+
+.topbar-responsavel h1 {
+    margin: 4px 0 0;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.acoes-responsavel {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.botao-notificacao {
+    width: 43px;
+    height: 43px;
+    border: none;
+    border-radius: 12px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+.perfil-topbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 13px;
+    border: 1px solid #e8ecf4;
+    border-radius: 14px;
+    background: #fff;
+    color: #34577d;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.avatar-topbar {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    background: #f0eaff;
+    border-radius: 50%;
+    font-size: 19px;
+}
+
+.perfil-topbar strong,
+.perfil-topbar small {
+    display: block;
+    text-align: left;
+}
+
+.perfil-topbar strong {
+    font-size: 12px;
+}
+
+.perfil-topbar small {
+    color: #94a0b4;
+    font-size: 10px;
+}
+
+/* BOAS-VINDAS */
+
+.boas-vindas-responsavel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 35px;
+    margin-bottom: 30px;
+    border-radius: 22px;
+    background: linear-gradient(115deg, #e9efff, #f2e9ff);
+}
+
+.etiqueta-responsavel {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #fff;
+    color: #a15ab9;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .4px;
+}
+
+.boas-vindas-responsavel h2 {
+    margin: 14px 0 8px;
+    color: #244f82;
+    font-size: 24px;
+}
+
+.boas-vindas-responsavel p {
+    max-width: 620px;
+    color: #667c9b;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.botao-filhos {
+    display: inline-block;
+    padding: 11px 17px;
+    margin-top: 8px;
+    border-radius: 12px;
+    background: #7658b8;
+    color: white;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.botao-filhos:hover {
+    background: #60439e;
+    transform: translateY(-2px);
+}
+
+.ilustracao-responsavel {
+    font-size: 43px;
+    white-space: nowrap;
+}
+
+/* TÍTULOS */
+
+.secao-crianca,
+.secao-resumo,
+.grade-informacoes,
+.secao-conquistas,
+.painel-profissionais {
+    margin-bottom: 30px;
+}
+
+.titulo-responsavel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 16px;
+}
+
+.titulo-responsavel h2 {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.titulo-responsavel p {
+    margin: 4px 0 0;
+    color: #8a98ad;
+    font-size: 12px;
+}
+
+.link-responsavel,
+.link-painel {
+    color: #7956b7;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+/* PERFIL DA CRIANÇA */
+
+.cartao-crianca {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #e9edf5;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(48, 72, 110, .04);
+}
+
+.foto-crianca {
+    width: 76px;
+    height: 76px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #f0eaff;
+    font-size: 39px;
+}
+
+.dados-crianca {
+    flex: 1;
+}
+
+.identificacao-label {
+    color: #a17abd;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .7px;
+}
+
+.dados-crianca h3 {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.dados-crianca p {
+    margin: 0;
+    color: #8a98ad;
+    font-size: 12px;
+}
+
+.etiquetas-crianca {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 11px;
+}
+
+.etiquetas-crianca span {
+    padding: 5px 9px;
+    border-radius: 20px;
+    background: #f3f0ff;
+    color: #8463ae;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.acesso-crianca a {
+    color: #7956b7;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+/* INDICADORES */
+
+.grade-resumo {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.card-resumo {
+    padding: 20px;
+    border: 1px solid #e9edf5;
+    border-radius: 17px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(48, 72, 110, .04);
+}
+
+.resumo-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resumo-topo span {
+    font-size: 25px;
+}
+
+.resumo-topo small {
+    color: #9ba6b7;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.card-resumo > strong {
+    display: block;
+    margin-top: 14px;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.card-resumo p {
+    margin: 4px 0 0;
+    color: #8190a6;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.resumo-rotina > strong { color: #3999d4; }
+.resumo-atividades > strong { color: #a16bc7; }
+.resumo-emocoes > strong { color: #e77ba9; }
+.resumo-conquistas > strong { color: #e8a34f; }
+
+/* ROTINA E EMOÇÕES */
+
+.grade-informacoes {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 18px;
+}
+
+.painel-informacao {
+    padding: 22px;
+    border: 1px solid #e9edf5;
+    border-radius: 18px;
+    background: #fff;
+}
+
+.icone-painel {
+    font-size: 22px;
+}
+
+.lista-rotina {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.item-rotina {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 12px 0;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.rotina-check {
+    width: 27px;
+    height: 27px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #e8f6ed;
+    color: #48a477;
+    font-weight: 800;
+}
+
+.item-rotina.pendente .rotina-check {
+    background: #fff3e3;
+    color: #d69b47;
+}
+
+.item-rotina > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.item-rotina strong,
+.item-rotina small {
+    display: block;
+}
+
+.item-rotina strong {
+    color: #405c7b;
+    font-size: 12px;
+}
+
+.item-rotina small {
+    margin-top: 3px;
+    color: #96a1b3;
+    font-size: 10px;
+}
+
+.status-rotina {
+    color: #55a37c;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.pendente .status-rotina {
+    color: #d69b47;
+}
+
+.emocao-destaque {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 22px 15px;
+    margin: 18px 0;
+    border-radius: 15px;
+    background: #fff2f7;
+}
+
+.emoji-emocao {
+    font-size: 43px;
+}
+
+.emocao-destaque strong,
+.emocao-destaque small {
+    display: block;
+}
+
+.emocao-destaque strong {
+    color: #c66b99;
+    font-size: 18px;
+}
+
+.emocao-destaque small {
+    margin-top: 4px;
+    color: #a78b9b;
+    font-size: 10px;
+}
+
+.texto-emocao {
+    color: #8491a5;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* CONQUISTAS */
+
+.secao-conquistas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px 30px;
+    border-radius: 20px;
+    background: linear-gradient(110deg, #fff5e3, #fff0f5);
+}
+
+.conquista-texto h2 {
+    margin: 12px 0 7px;
+    font-size: 19px;
+}
+
+.conquista-texto p {
+    color: #8491a5;
+    font-size: 12px;
+}
+
+.link-conquista {
+    color: #b47b38;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.trofeu-conquista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    min-width: 190px;
+    padding: 20px;
+    border-radius: 16px;
+    background: white;
+    text-align: center;
+}
+
+.trofeu-conquista span {
+    font-size: 33px;
+}
+
+.trofeu-conquista strong {
+    font-size: 12px;
+}
+
+.trofeu-conquista small {
+    color: #96a1b3;
+    font-size: 10px;
+}
+
+/* PROFISSIONAIS */
+
+.painel-profissionais {
+    padding: 22px;
+    border: 1px solid #e9edf5;
+    border-radius: 18px;
+    background: white;
+}
+
+.profissional-exemplo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 15px 0;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.avatar-profissional {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    background: #eaf2ff;
+    font-size: 22px;
+}
+
+.profissional-exemplo > div:nth-child(2) {
+    flex: 1;
+}
+
+.profissional-exemplo strong,
+.profissional-exemplo small {
+    display: block;
+}
+
+.profissional-exemplo strong {
+    font-size: 12px;
+}
+
+.profissional-exemplo small {
+    margin-top: 4px;
+    color: #94a0b4;
+    font-size: 10px;
+}
+
+.autorizacao {
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #e5f7ed;
+    color: #439a70;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+/* RODAPÉ */
+
+.rodape-responsavel {
+    padding: 20px 0 5px;
+    text-align: center;
+    color: #96a1b3;
+    font-size: 11px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1100px) {
+    .grade-resumo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .conteudo-responsavel {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 760px) {
+    .layout-responsavel {
+        flex-direction: column;
+    }
+
+    .sidebar-responsavel {
+        width: 100%;
+        min-width: 0;
+        padding: 12px;
+    }
+
+    .logo-responsavel img {
+        width: 120px;
+        height: 70px;
+    }
+
+    .identificacao-responsavel,
+    .mensagem-responsavel,
+    .sair-responsavel {
+        display: none;
+    }
+
+    .menu-responsavel {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .menu-titulo {
+        display: none;
+    }
+
+    .item-responsavel {
+        padding: 9px;
+        font-size: 11px;
+    }
+
+    .conteudo-responsavel {
+        padding: 18px 13px;
+    }
+
+    .topbar-responsavel {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .boas-vindas-responsavel {
+        padding: 22px;
+    }
+
+    .ilustracao-responsavel {
+        display: none;
+    }
+
+    .grade-informacoes {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .grade-resumo {
+        grid-template-columns: 1fr;
+    }
+
+    .cartao-crianca {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .acesso-crianca {
+        width: 100%;
+    }
+
+    .secao-conquistas {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .trofeu-conquista {
+        width: 100%;
+    }
+
+    .boas-vindas-responsavel h2 {
+        font-size: 20px;
+    }
+
+    .titulo-responsavel {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

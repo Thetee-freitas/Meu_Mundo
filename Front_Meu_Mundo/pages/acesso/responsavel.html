@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Espaço de acompanhamento do responsável no Meu Mundo.">
+
+    <title>Espaço do Responsável | Meu Mundo!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/responsavel.css">
+</head>
+
+<body class="pagina-responsavel">
+
+<div class="layout-responsavel">
+
+    <!-- MENU LATERAL -->
+    <aside class="sidebar-responsavel">
+
+        <a href="inicio.html" class="logo-responsavel">
+            <img src="../../assets/logo/logo_meu_mundo.jpg"
+                 alt="Logo Meu Mundo">
+        </a>
+
+        <div class="identificacao-responsavel">
+            <div class="avatar-responsavel">💜</div>
+            <div>
+                <strong id="nomeResponsavel">Meu perfil</strong>
+                <small>Área do responsável</small>
+            </div>
+        </div>
+
+        <nav class="menu-responsavel">
+
+            <span class="menu-titulo">ACOMPANHAMENTO</span>
+
+            <a href="inicio.html" class="item-responsavel ativo">
+                <span>🏠</span> Visão geral
+            </a>
+
+            <a href="filhos.html" class="item-responsavel">
+                <span>👨‍👩‍👧</span> Meus filhos
+            </a>
+
+            <a href="rotina.html" class="item-responsavel">
+                <span>📅</span> Minha rotina
+            </a>
+
+            <a href="atividades.html" class="item-responsavel">
+                <span>🧩</span> Atividades
+            </a>
+
+            <a href="emocoes.html" class="item-responsavel">
+                <span>💗</span> Emoções
+            </a>
+
+            <a href="profissionais.html" class="item-responsavel">
+                <span>👩‍⚕️</span> Profissionais
+            </a>
+
+            <span class="menu-titulo menu-secundario">
+                PREFERÊNCIAS
+            </span>
+
+            <a href="configuracoes.html" class="item-responsavel">
+                <span>⚙️</span> Configurações
+            </a>
+
+        </nav>
+
+        <div class="mensagem-responsavel">
+            <span>🌈</span>
+            <strong>Cada conquista importa!</strong>
+            <small>Pequenos passos também representam grandes avanços.</small>
+        </div>
+
+        <button type="button" class="sair-responsavel" id="botaoSair">
+            ↩ Sair da plataforma
+        </button>
+
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudo-responsavel">
+
+        <!-- CABEÇALHO -->
+        <header class="topbar-responsavel">
+
+            <div>
+                <span class="data-responsavel" id="dataAtual"></span>
+                <h1>Espaço do Responsável</h1>
+            </div>
+
+            <div class="acoes-responsavel">
+
+                <button type="button" class="botao-notificacao"
+                        id="botaoNotificacao" aria-label="Notificações">
+                    🔔
+                </button>
+
+                <button type="button" class="perfil-topbar"
+                        id="botaoPerfil">
+                    <span class="avatar-topbar">💜</span>
+                    <span>
+                        <strong id="nomePerfil">Responsável</strong>
+                        <small>Meu perfil</small>
+                    </span>
+                    <span>⌄</span>
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- BOAS-VINDAS -->
+        <section class="boas-vindas-responsavel">
+
+            <div class="texto-boas-vindas">
+
+                <span class="etiqueta-responsavel">
+                    💜 UM ESPAÇO PARA ACOMPANHAR E ACOLHER
+                </span>
+
+                <h2>Bem-vindo ao espaço de acompanhamento! 💛</h2>
+
+                <p>
+                    Acompanhe a rotina, as atividades, as emoções
+                    e as conquistas da criança. Cada passo faz parte
+                    de uma linda jornada de desenvolvimento!
+                </p>
+
+                <a href="filhos.html" class="botao-filhos">
+                    Conhecer meus filhos →
+                </a>
+
+            </div>
+
+            <div class="ilustracao-responsavel">
+                👨‍👩‍👧 💜 🌈
+            </div>
+
+        </section>
+
+        <!-- CRIANÇA ACOMPANHADA -->
+        <section class="secao-crianca">
+
+            <div class="titulo-responsavel">
+                <div>
+                    <h2>Quem estou acompanhando?</h2>
+                    <p>Perfil da criança vinculada à sua conta.</p>
+                </div>
+
+                <a href="filhos.html" class="link-responsavel">
+                    Ver perfil →
+                </a>
+            </div>
+
+            <article class="cartao-crianca">
+
+                <div class="foto-crianca">🧒</div>
+
+                <div class="dados-crianca">
+                    <span class="identificacao-label">PERFIL ACOMPANHADO</span>
+                    <h3 id="nomeCrianca">Pequeno Explorador</h3>
+                    <p id="apelidoCrianca">Meu mundo de descobertas!</p>
+
+                    <div class="etiquetas-crianca">
+                        <span>🌱 Aprendendo e crescendo</span>
+                        <span>💜 Perfil vinculado</span>
+                    </div>
+                </div>
+
+                <div class="acesso-crianca">
+                    <a href="filhos.html">Acessar perfil →</a>
+                </div>
+
+            </article>
+
+        </section>
+
+        <!-- INDICADORES -->
+        <section class="secao-resumo">
+
+            <div class="titulo-responsavel">
+                <div>
+                    <h2>Resumo do acompanhamento</h2>
+                    <p>Um olhar sobre as atividades e experiências recentes.</p>
+                </div>
+            </div>
+
+            <div class="grade-resumo">
+
+                <article class="card-resumo resumo-rotina">
+                    <div class="resumo-topo">
+                        <span>📅</span>
+                        <small>Rotina</small>
+                    </div>
+                    <strong id="tarefasConcluidas">04/06</strong>
+                    <p>Atividades realizadas hoje</p>
+                </article>
+
+                <article class="card-resumo resumo-atividades">
+                    <div class="resumo-topo">
+                        <span>🧩</span>
+                        <small>Aprendizagem</small>
+                    </div>
+                    <strong id="atividadesConcluidas">08</strong>
+                    <p>Atividades concluídas</p>
+                </article>
+
+                <article class="card-resumo resumo-emocoes">
+                    <div class="resumo-topo">
+                        <span>💗</span>
+                        <small>Bem-estar</small>
+                    </div>
+                    <strong id="emocaoAtual">😊</strong>
+                    <p>Último registro emocional compartilhado</p>
+                </article>
+
+                <article class="card-resumo resumo-conquistas">
+                    <div class="resumo-topo">
+                        <span>🏆</span>
+                        <small>Conquistas</small>
+                    </div>
+                    <strong id="totalConquistas">05</strong>
+                    <p>Conquistas registradas</p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- ROTINA E EMOÇÕES -->
+        <section class="grade-informacoes">
+
+            <article class="painel-informacao">
+
+                <div class="titulo-responsavel">
+                    <div>
+                        <h2>Rotina de hoje</h2>
+                        <p>Atividades compartilhadas pela criança.</p>
+                    </div>
+                    <span class="icone-painel">📅</span>
+                </div>
+
+                <div class="lista-rotina">
+
+                    <div class="item-rotina concluido">
+                        <span class="rotina-check">✓</span>
+                        <div>
+                            <strong>Organizar os materiais</strong>
+                            <small>08:00 · Concluído</small>
+                        </div>
+                        <span class="status-rotina">Concluído</span>
+                    </div>
+
+                    <div class="item-rotina concluido">
+                        <span class="rotina-check">✓</span>
+                        <div>
+                            <strong>Atividade de leitura</strong>
+                            <small>09:00 · Concluído</small>
+                        </div>
+                        <span class="status-rotina">Concluído</span>
+                    </div>
+
+                    <div class="item-rotina pendente">
+                        <span class="rotina-check">○</span>
+                        <div>
+                            <strong>Jogo de matemática</strong>
+                            <small>10:00 · Pendente</small>
+                        </div>
+                        <span class="status-rotina">Pendente</span>
+                    </div>
+
+                    <div class="item-rotina pendente">
+                        <span class="rotina-check">○</span>
+                        <div>
+                            <strong>Momento de descanso</strong>
+                            <small>11:00 · Pendente</small>
+                        </div>
+                        <span class="status-rotina">Pendente</span>
+                    </div>
+
+                </div>
+
+                <a href="rotina.html" class="link-painel">
+                    Visualizar rotina completa →
+                </a>
+
+            </article>
+
+            <article class="painel-informacao painel-emocoes">
+
+                <div class="titulo-responsavel">
+                    <div>
+                        <h2>Como a criança está se sentindo?</h2>
+                        <p>Último registro emocional compartilhado.</p>
+                    </div>
+                    <span class="icone-painel">💗</span>
+                </div>
+
+                <div class="emocao-destaque">
+                    <span class="emoji-emocao">😊</span>
+                    <div>
+                        <strong>Feliz</strong>
+                        <small>Registro demonstrativo</small>
+                    </div>
+                </div>
+
+                <p class="texto-emocao">
+                    Cada sentimento merece atenção, acolhimento
+                    e respeito.
+                </p>
+
+                <a href="emocoes.html" class="link-painel">
+                    Ver registros emocionais →
+                </a>
+
+            </article>
+
+        </section>
+
+        <!-- CONQUISTAS -->
+        <section class="secao-conquistas">
+
+            <div class="conquista-texto">
+                <span class="etiqueta-responsavel">
+                    🌟 PEQUENAS CONQUISTAS
+                </span>
+
+                <h2>Cada passo merece ser celebrado!</h2>
+
+                <p>
+                    Valorize cada descoberta, cada tentativa
+                    e cada novo aprendizado.
+                </p>
+
+                <a href="atividades.html" class="link-conquista">
+                    Ver atividades e conquistas →
+                </a>
+            </div>
+
+            <div class="trofeu-conquista">
+                <span>🏆</span>
+                <strong>Você está no caminho!</strong>
+                <small>Aprender é uma jornada, não uma competição.</small>
+            </div>
+
+        </section>
+
+        <!-- PROFISSIONAIS -->
+        <section class="painel-profissionais">
+
+            <div class="titulo-responsavel">
+                <div>
+                    <h2>Profissionais autorizados</h2>
+                    <p>Consulte os profissionais vinculados ao acompanhamento.</p>
+                </div>
+            </div>
+
+            <div class="profissional-exemplo">
+                <div class="avatar-profissional">👩‍⚕️</div>
+
+                <div>
+                    <strong>Profissional demonstrativo</strong>
+                    <small>Psicopedagogia</small>
+                </div>
+
+                <span class="autorizacao">Autorizado</span>
+            </div>
+
+            <a href="profissionais.html" class="link-painel">
+                Consultar profissionais →
+            </a>
+
+        </section>
+
+        <!-- RODAPÉ -->
+        <footer class="rodape-responsavel">
+            🌈 Meu Mundo! — Cada pessoa tem seu próprio jeito de aprender e crescer.
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="../../JS/responsavel.js"></script>
+
+</body>
+</html>

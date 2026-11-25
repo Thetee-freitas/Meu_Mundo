@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Painel de gerenciamento da Clínica Meu Mundo.">
+
+    <title>Painel da Clínica | Meu Mundo!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/clinica.css">
+</head>
+
+<body class="pagina-clinica">
+
+    <div class="layout-clinica">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar-clinica">
+
+            <a href="inicio.html" class="marca-clinica">
+                <img src="../../assets/logo/logo_meu_mundo.jpg"
+                     alt="Logo Meu Mundo">
+            </a>
+
+            <div class="identificacao-clinica">
+                <div class="icone-clinica">🏥</div>
+                <div>
+                    <strong id="nomeClinica">Clínica Meu Mundo</strong>
+                    <small>Área institucional</small>
+                </div>
+            </div>
+
+            <nav class="menu-clinica">
+
+                <span class="menu-titulo">MENU PRINCIPAL</span>
+
+                <a href="inicio.html" class="item-menu ativo">
+                    <span>🏠</span> Visão geral
+                </a>
+
+                <a href="profissionais.html" class="item-menu">
+                    <span>👩‍⚕️</span> Profissionais
+                </a>
+
+                <a href="pacientes.html" class="item-menu">
+                    <span>🧒</span> Pacientes
+                </a>
+
+                <a href="agendamentos.html" class="item-menu">
+                    <span>📅</span> Agendamentos
+                </a>
+
+                <a href="acompanhamentos.html" class="item-menu">
+                    <span>📊</span> Acompanhamentos
+                </a>
+
+                <a href="relatorios.html" class="item-menu">
+                    <span>📑</span> Relatórios
+                </a>
+
+                <span class="menu-titulo menu-titulo-secundario">
+                    PREFERÊNCIAS
+                </span>
+
+                <a href="#configuracoes" class="item-menu">
+                    <span>⚙️</span> Configurações
+                </a>
+
+            </nav>
+
+            <div class="ajuda-clinica">
+                <span>💜</span>
+                <strong>Juntos pelo desenvolvimento!</strong>
+                <small>Cada pessoa tem seu próprio jeito de aprender e crescer.</small>
+            </div>
+
+            <button class="botao-sair" id="botaoSair" type="button">
+                ↩ Sair da plataforma
+            </button>
+
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="conteudo-clinica">
+
+            <!-- CABEÇALHO -->
+            <header class="topbar-clinica">
+
+                <div>
+                    <span class="data-atual" id="dataAtual"></span>
+                    <h1>Painel da Clínica</h1>
+                </div>
+
+                <div class="acoes-topbar">
+                    <button class="botao-notificacao" type="button"
+                            aria-label="Notificações">
+                        🔔
+                    </button>
+
+                    <button class="perfil-clinica" type="button"
+                            id="botaoPerfil">
+                        <span class="avatar-clinica">🏥</span>
+                        <span>
+                            <strong id="nomePerfil">Minha Clínica</strong>
+                            <small>Administrador</small>
+                        </span>
+                        <span>⌄</span>
+                    </button>
+                </div>
+
+            </header>
+
+            <!-- BOAS-VINDAS -->
+            <section class="boas-vindas-clinica">
+
+                <div>
+                    <span class="etiqueta-clinica">
+                        ✨ SEU ESPAÇO DE GESTÃO
+                    </span>
+
+                    <h2>Olá, seja bem-vindo(a)! 💜</h2>
+
+                    <p>
+                        Aqui você pode organizar sua equipe, gerenciar
+                        atendimentos e acompanhar os usuários autorizados.
+                    </p>
+                </div>
+
+                <div class="ilustracao-clinica">🌈 🧠 💜</div>
+
+            </section>
+
+            <!-- INDICADORES -->
+            <section class="secao-indicadores">
+
+                <div class="titulo-conteudo">
+                    <div>
+                        <h2>Visão geral</h2>
+                        <p>Acompanhe os principais indicadores da clínica.</p>
+                    </div>
+                </div>
+
+                <div class="grade-indicadores">
+
+                    <article class="indicador indicador-azul">
+                        <div class="indicador-topo">
+                            <span>👩‍⚕️</span>
+                            <small>Equipe</small>
+                        </div>
+                        <strong id="totalProfissionais">08</strong>
+                        <p>Profissionais cadastrados</p>
+                    </article>
+
+                    <article class="indicador indicador-roxo">
+                        <div class="indicador-topo">
+                            <span>🧒</span>
+                            <small>Usuários</small>
+                        </div>
+                        <strong id="totalPacientes">24</strong>
+                        <p>Pacientes autorizados</p>
+                    </article>
+
+                    <article class="indicador indicador-laranja">
+                        <div class="indicador-topo">
+                            <span>📅</span>
+                            <small>Agenda</small>
+                        </div>
+                        <strong id="totalAtendimentos">12</strong>
+                        <p>Atendimentos agendados</p>
+                    </article>
+
+                    <article class="indicador indicador-verde">
+                        <div class="indicador-topo">
+                            <span>📈</span>
+                            <small>Atividade</small>
+                        </div>
+                        <strong id="totalAcompanhamentos">18</strong>
+                        <p>Acompanhamentos ativos</p>
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- ACESSOS RÁPIDOS -->
+            <section class="secao-atalhos">
+
+                <div class="titulo-conteudo">
+                    <div>
+                        <h2>Acesso rápido</h2>
+                        <p>Encontre facilmente as principais funcionalidades.</p>
+                    </div>
+                </div>
+
+                <div class="grade-atalhos">
+
+                    <a href="profissionais.html" class="atalho">
+                        <span class="atalho-icone azul">👩‍⚕️</span>
+                        <strong>Gerenciar profissionais</strong>
+                        <small>Organize sua equipe.</small>
+                        <span class="atalho-link">Acessar →</span>
+                    </a>
+
+                    <a href="pacientes.html" class="atalho">
+                        <span class="atalho-icone roxo">🧒</span>
+                        <strong>Gerenciar pacientes</strong>
+                        <small>Consulte usuários autorizados.</small>
+                        <span class="atalho-link">Acessar →</span>
+                    </a>
+
+                    <a href="agendamentos.html" class="atalho">
+                        <span class="atalho-icone laranja">📅</span>
+                        <strong>Organizar agenda</strong>
+                        <small>Gerencie os atendimentos.</small>
+                        <span class="atalho-link">Acessar →</span>
+                    </a>
+
+                    <a href="relatorios.html" class="atalho">
+                        <span class="atalho-icone verde">📊</span>
+                        <strong>Visualizar relatórios</strong>
+                        <small>Acompanhe as atividades.</small>
+                        <span class="atalho-link">Acessar →</span>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- PRÓXIMOS ATENDIMENTOS -->
+            <section class="secao-agenda">
+
+                <div class="titulo-conteudo">
+                    <div>
+                        <h2>Próximos atendimentos</h2>
+                        <p>Resumo demonstrativo da agenda da clínica.</p>
+                    </div>
+
+                    <a href="agendamentos.html" class="link-ver-todos">
+                        Ver agenda completa →
+                    </a>
+                </div>
+
+                <div class="tabela-responsiva">
+                    <table class="tabela-clinica">
+                        <thead>
+                            <tr>
+                                <th>Horário</th>
+                                <th>Usuário</th>
+                                <th>Profissional</th>
+                                <th>Especialidade</th>
+                                <th>Situação</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="listaAtendimentos">
+                            <tr>
+                                <td>09:00</td>
+                                <td>Usuário demonstrativo 01</td>
+                                <td>Ana Martins</td>
+                                <td>Psicopedagogia</td>
+                                <td><span class="status confirmado">Confirmado</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>10:30</td>
+                                <td>Usuário demonstrativo 02</td>
+                                <td>Lucas Oliveira</td>
+                                <td>Fonoaudiologia</td>
+                                <td><span class="status pendente">Pendente</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>14:00</td>
+                                <td>Usuário demonstrativo 03</td>
+                                <td>Mariana Costa</td>
+                                <td>Terapia ocupacional</td>
+                                <td><span class="status confirmado">Confirmado</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+            <!-- RODAPÉ -->
+            <footer class="rodape-clinica">
+                🌈 Meu Mundo! — Um espaço organizado para todas as mentes.
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="../../JS/clinica.js"></script>
+
+</body>
+</html>

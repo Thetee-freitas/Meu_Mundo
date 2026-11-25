@@ -1,0 +1,461 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Espaço profissional de acompanhamento do Meu Mundo.">
+
+    <title>Espaço Profissional | Meu Mundo!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/profissional.css">
+</head>
+
+<body class="pagina-profissional">
+
+<div class="layout-profissional">
+
+    <!-- MENU LATERAL -->
+    <aside class="sidebar-profissional">
+
+        <a href="inicio.html" class="logo-profissional">
+            <img src="../../assets/logo/logo_meu_mundo.jpg"
+                 alt="Logo Meu Mundo">
+        </a>
+
+        <div class="identificacao-profissional">
+            <div class="avatar-profissional">👩‍⚕️</div>
+
+            <div>
+                <strong id="nomeProfissional">Meu perfil</strong>
+                <small>Área profissional</small>
+            </div>
+        </div>
+
+        <nav class="menu-profissional">
+
+            <span class="menu-titulo">GESTÃO PROFISSIONAL</span>
+
+            <a href="inicio.html" class="item-profissional ativo">
+                <span>🏠</span> Visão geral
+            </a>
+
+            <a href="pacientes.html" class="item-profissional">
+                <span>👧</span> Meus pacientes
+            </a>
+
+            <a href="agenda.html" class="item-profissional">
+                <span>📅</span> Minha agenda
+            </a>
+
+            <a href="acompanhamento.html" class="item-profissional">
+                <span>📋</span> Acompanhamento
+            </a>
+
+            <a href="atividades.html" class="item-profissional">
+                <span>🧩</span> Atividades
+            </a>
+
+            <a href="relatorios.html" class="item-profissional">
+                <span>📊</span> Relatórios
+            </a>
+
+            <a href="responsaveis.html" class="item-profissional">
+                <span>👨‍👩‍👧</span> Responsáveis
+            </a>
+
+            <span class="menu-titulo menu-secundario">
+                PREFERÊNCIAS
+            </span>
+
+            <a href="configuracoes.html" class="item-profissional">
+                <span>⚙️</span> Configurações
+            </a>
+
+        </nav>
+
+        <div class="mensagem-profissional">
+            <span>💜</span>
+            <strong>Seu trabalho transforma!</strong>
+            <small>Cada pessoa aprende e se desenvolve no seu próprio ritmo.</small>
+        </div>
+
+        <button type="button" class="sair-profissional" id="botaoSair">
+            ↩ Sair da plataforma
+        </button>
+
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudo-profissional">
+
+        <!-- CABEÇALHO -->
+        <header class="topbar-profissional">
+
+            <div>
+                <span class="data-profissional" id="dataAtual"></span>
+                <h1>Espaço Profissional</h1>
+            </div>
+
+            <div class="acoes-profissional">
+
+                <button type="button"
+                        class="botao-notificacao"
+                        id="botaoNotificacao"
+                        aria-label="Notificações">
+                    🔔
+                </button>
+
+                <button type="button"
+                        class="perfil-topbar"
+                        id="botaoPerfil">
+
+                    <span class="avatar-topbar">👩‍⚕️</span>
+
+                    <span>
+                        <strong id="nomePerfil">Profissional</strong>
+                        <small id="especialidadePerfil">Minha especialidade</small>
+                    </span>
+
+                    <span>⌄</span>
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- BOAS-VINDAS -->
+        <section class="boas-vindas-profissional">
+
+            <div class="texto-boas-vindas">
+
+                <span class="etiqueta-profissional">
+                    🌟 ESPAÇO DE DESENVOLVIMENTO E APRENDIZAGEM
+                </span>
+
+                <h2>Olá, profissional! Seja bem-vindo(a)! 💜</h2>
+
+                <p>
+                    Este é o seu espaço para organizar atendimentos,
+                    acompanhar seus pacientes e registrar cada etapa
+                    da jornada de desenvolvimento e aprendizagem.
+                </p>
+
+                <a href="pacientes.html" class="botao-pacientes">
+                    Acessar meus pacientes →
+                </a>
+
+            </div>
+
+            <div class="ilustracao-profissional">
+                🧠 💜 🌈
+            </div>
+
+        </section>
+
+        <!-- INDICADORES -->
+        <section class="secao-indicadores">
+
+            <div class="titulo-profissional">
+                <div>
+                    <h2>Resumo profissional</h2>
+                    <p>Visualize os principais indicadores do seu espaço.</p>
+                </div>
+            </div>
+
+            <div class="grade-indicadores">
+
+                <article class="card-indicador indicador-pacientes">
+                    <div class="indicador-topo">
+                        <span>👧</span>
+                        <small>Pacientes</small>
+                    </div>
+                    <strong>12</strong>
+                    <p>Pacientes vinculados</p>
+                </article>
+
+                <article class="card-indicador indicador-agenda">
+                    <div class="indicador-topo">
+                        <span>📅</span>
+                        <small>Agenda</small>
+                    </div>
+                    <strong>04</strong>
+                    <p>Atendimentos hoje</p>
+                </article>
+
+                <article class="card-indicador indicador-acompanhamento">
+                    <div class="indicador-topo">
+                        <span>📋</span>
+                        <small>Acompanhamentos</small>
+                    </div>
+                    <strong>08</strong>
+                    <p>Registros recentes</p>
+                </article>
+
+                <article class="card-indicador indicador-atividades">
+                    <div class="indicador-topo">
+                        <span>🧩</span>
+                        <small>Atividades</small>
+                    </div>
+                    <strong>15</strong>
+                    <p>Atividades compartilhadas</p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- AGENDA E PACIENTES -->
+        <section class="grade-profissional">
+
+            <!-- AGENDA -->
+            <article class="painel-profissional">
+
+                <div class="titulo-profissional">
+                    <div>
+                        <h2>Próximos atendimentos</h2>
+                        <p>Organização da sua agenda.</p>
+                    </div>
+
+                    <span class="icone-painel">📅</span>
+                </div>
+
+                <div class="lista-atendimentos">
+
+                    <div class="item-atendimento">
+                        <div class="horario-atendimento">
+                            <strong>09:00</strong>
+                            <small>Hoje</small>
+                        </div>
+
+                        <div class="dados-atendimento">
+                            <strong>Paciente demonstrativo 01</strong>
+                            <small>Atendimento individual</small>
+                        </div>
+
+                        <span class="status-atendimento confirmado">
+                            Confirmado
+                        </span>
+                    </div>
+
+                    <div class="item-atendimento">
+                        <div class="horario-atendimento">
+                            <strong>10:30</strong>
+                            <small>Hoje</small>
+                        </div>
+
+                        <div class="dados-atendimento">
+                            <strong>Paciente demonstrativo 02</strong>
+                            <small>Acompanhamento</small>
+                        </div>
+
+                        <span class="status-atendimento confirmado">
+                            Confirmado
+                        </span>
+                    </div>
+
+                    <div class="item-atendimento">
+                        <div class="horario-atendimento">
+                            <strong>14:00</strong>
+                            <small>Hoje</small>
+                        </div>
+
+                        <div class="dados-atendimento">
+                            <strong>Paciente demonstrativo 03</strong>
+                            <small>Atendimento individual</small>
+                        </div>
+
+                        <span class="status-atendimento pendente">
+                            Pendente
+                        </span>
+                    </div>
+
+                    <div class="item-atendimento">
+                        <div class="horario-atendimento">
+                            <strong>15:30</strong>
+                            <small>Hoje</small>
+                        </div>
+
+                        <div class="dados-atendimento">
+                            <strong>Paciente demonstrativo 04</strong>
+                            <small>Atendimento individual</small>
+                        </div>
+
+                        <span class="status-atendimento confirmado">
+                            Confirmado
+                        </span>
+                    </div>
+
+                </div>
+
+                <a href="agenda.html" class="link-profissional">
+                    Visualizar agenda completa →
+                </a>
+
+            </article>
+
+            <!-- PACIENTES RECENTES -->
+            <article class="painel-profissional">
+
+                <div class="titulo-profissional">
+                    <div>
+                        <h2>Pacientes recentes</h2>
+                        <p>Perfis acompanhados recentemente.</p>
+                    </div>
+
+                    <span class="icone-painel">👥</span>
+                </div>
+
+                <div class="lista-pacientes">
+
+                    <div class="item-paciente">
+                        <div class="avatar-paciente avatar-azul">🧒</div>
+                        <div>
+                            <strong>Paciente demonstrativo 01</strong>
+                            <small>Último acompanhamento: hoje</small>
+                        </div>
+                        <span class="status-paciente">Ativo</span>
+                    </div>
+
+                    <div class="item-paciente">
+                        <div class="avatar-paciente avatar-rosa">👧</div>
+                        <div>
+                            <strong>Paciente demonstrativo 02</strong>
+                            <small>Último acompanhamento: ontem</small>
+                        </div>
+                        <span class="status-paciente">Ativo</span>
+                    </div>
+
+                    <div class="item-paciente">
+                        <div class="avatar-paciente avatar-verde">🧑</div>
+                        <div>
+                            <strong>Paciente demonstrativo 03</strong>
+                            <small>Último acompanhamento: ontem</small>
+                        </div>
+                        <span class="status-paciente">Ativo</span>
+                    </div>
+
+                </div>
+
+                <a href="pacientes.html" class="link-profissional">
+                    Consultar todos os pacientes →
+                </a>
+
+            </article>
+
+        </section>
+
+        <!-- ATIVIDADES E ACOMPANHAMENTO -->
+        <section class="grade-profissional grade-inferior">
+
+            <article class="painel-profissional">
+
+                <div class="titulo-profissional">
+                    <div>
+                        <h2>Atividades compartilhadas</h2>
+                        <p>Atividades educativas disponíveis para acompanhamento.</p>
+                    </div>
+                    <span class="icone-painel">🧩</span>
+                </div>
+
+                <div class="atividade-profissional">
+                    <span class="icone-atividade">🔢</span>
+                    <div>
+                        <strong>Desafio matemático</strong>
+                        <small>Matemática · Atividade educativa</small>
+                    </div>
+                    <span class="atividade-status">Disponível</span>
+                </div>
+
+                <div class="atividade-profissional">
+                    <span class="icone-atividade">📖</span>
+                    <div>
+                        <strong>Hora da leitura</strong>
+                        <small>Leitura · Atividade educativa</small>
+                    </div>
+                    <span class="atividade-status">Disponível</span>
+                </div>
+
+                <div class="atividade-profissional">
+                    <span class="icone-atividade">🧠</span>
+                    <div>
+                        <strong>Jogo da memória</strong>
+                        <small>Memória · Atividade educativa</small>
+                    </div>
+                    <span class="atividade-status">Disponível</span>
+                </div>
+
+                <a href="atividades.html" class="link-profissional">
+                    Explorar atividades →
+                </a>
+
+            </article>
+
+            <article class="painel-profissional painel-registros">
+
+                <div class="titulo-profissional">
+                    <div>
+                        <h2>Acompanhamentos recentes</h2>
+                        <p>Últimos registros demonstrativos.</p>
+                    </div>
+                    <span class="icone-painel">📝</span>
+                </div>
+
+                <div class="registro-profissional">
+                    <span class="registro-icone">📚</span>
+                    <div>
+                        <strong>Registro de aprendizagem</strong>
+                        <small>Paciente demonstrativo 01</small>
+                        <small>Hoje · 09:30</small>
+                    </div>
+                </div>
+
+                <div class="registro-profissional">
+                    <span class="registro-icone">🎯</span>
+                    <div>
+                        <strong>Registro de atividade</strong>
+                        <small>Paciente demonstrativo 02</small>
+                        <small>Ontem · 14:00</small>
+                    </div>
+                </div>
+
+                <a href="acompanhamento.html" class="link-profissional">
+                    Ver acompanhamentos →
+                </a>
+
+            </article>
+
+        </section>
+
+        <!-- MENSAGEM FINAL -->
+        <section class="mensagem-final-profissional">
+
+            <div>
+                <span>💜</span>
+                <div>
+                    <strong>Respeite o tempo e o jeito de aprender de cada pessoa.</strong>
+                    <p>O desenvolvimento acontece de maneiras diferentes, e cada conquista merece ser valorizada.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- RODAPÉ -->
+        <footer class="rodape-profissional">
+            🌈 Meu Mundo! — Cada pessoa tem seu próprio jeito de aprender e crescer.
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="../../JS/profissional.js"></script>
+
+</body>
+</html>
