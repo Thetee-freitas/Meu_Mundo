@@ -8,8 +8,8 @@
 
 .cabecalho {
     width: 100%;
-    min-height: 76px;
-    padding: 12px 7%;
+    min-height: 92px;
+    padding: 0 7%;
     background: var(--cor-superficie);
     display: flex;
     align-items: center;
@@ -34,9 +34,10 @@
 
 .logo-imagem {
     display: block;
-    width: 68px;
-    height: 68px;
+    width: 160px;
+    height: 92px;
     object-fit: contain;
+    transform: scale(1.2);
 }
 
 .exclamacao {
@@ -89,8 +90,8 @@ main {
 /* BOAS-VINDAS */
 
 .boas-vindas {
-    min-height: 300px;
-    padding: 40px 50px;
+    min-height: 0;
+    padding: 28px 50px;
     background: linear-gradient(
         120deg,
         #E8F2FF,
@@ -384,7 +385,11 @@ main {
 @media (max-width: 700px) {
     .cabecalho {
         flex-wrap: wrap;
-        padding: 15px 5%;
+        padding: 0 5%;
+    }
+
+    .logo-imagem {
+        height: 98px;
     }
 
     .menu {
@@ -424,6 +429,11 @@ main {
 @media (max-width: 480px) {
     .logo {
         font-size: 21px;
+    }
+
+    .logo-imagem {
+        width: min(160px, 60vw);
+        height: min(98px, 56vw);
     }
 
     .botao-perfil {

@@ -115,6 +115,11 @@ select:focus-visible {
     border-radius: 12px;
 }
 
+.logo-login-pagina {
+    width: min(100%, 480px);
+    max-height: 280px;
+}
+
 .marca-mensagem {
     margin-top: 15px;
 }
@@ -561,6 +566,10 @@ body[data-theme="contraste"] .login-etiqueta {
         max-height: 175px;
     }
 
+    .logo-login-pagina {
+        max-height: 220px;
+    }
+
     .painel-login {
         padding: 35px 25px;
     }
@@ -579,6 +588,11 @@ body[data-theme="contraste"] .login-etiqueta {
         width: min(100%, 280px);
         max-height: 150px;
         margin-bottom: 15px;
+    }
+
+    .logo-login-pagina {
+        width: min(100%, 340px);
+        max-height: 180px;
     }
 
     .marca-mensagem {
@@ -792,7 +806,7 @@ body[data-theme="contraste"] .login-etiqueta {
     min-height: 100vh;
     margin: 0;
     font-family: 'Nunito', sans-serif;
-    background: #f4f7fc;
+    background: #fff;
     color: #173b68;
 }
 
@@ -801,94 +815,53 @@ body[data-theme="contraste"] .login-etiqueta {
 }
 
 .container-autenticacao {
-    min-height: 100vh;
+    min-height: calc(100vh - 92px);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 
-.painel-apresentacao {
-    background: linear-gradient(145deg, #292c4a, #343052 55%, #254451);
-    color: #fff;
-    padding: 55px 11%;
+.cabecalho-recuperacao {
+    min-height: 92px;
+    padding: 0 7%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    background: #fff;
 }
 
 .logo-recuperacao {
-    width: 100%;
-    max-width: 360px;
-    margin-bottom: 35px;
-    overflow: hidden;
-    border-radius: 12px;
-    background: #fff;
+    width: 160px;
+    height: 92px;
+    flex: none;
 }
 
 .logo-recuperacao img {
     width: 100%;
+    height: 100%;
     display: block;
     object-fit: contain;
+    transform: scale(1.2);
 }
 
 .etiqueta-acesso {
     display: inline-block;
     padding: 9px 16px;
     border-radius: 30px;
-    background: rgba(151, 108, 204, 0.20);
-    color: #d9c3ff;
+    background: #f1eafe;
+    color: #7253a6;
     font-size: 12px;
     font-weight: 800;
     letter-spacing: .5px;
     margin-bottom: 20px;
 }
 
-.painel-apresentacao h1 {
-    font-size: clamp(30px, 3vw, 44px);
-    line-height: 1.2;
-    margin: 0 0 20px;
-    color: #fff;
-}
-
-.painel-apresentacao h1 span {
-    display: block;
-    color: #62d5c8;
-}
-
-.painel-apresentacao > p {
-    max-width: 430px;
-    line-height: 1.8;
-    color: #e2e6f2;
-    font-size: 15px;
-}
-
-.mensagem-acolhimento {
-    margin-top: 22px;
-    padding: 20px;
-    width: 100%;
-    max-width: 430px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border: 1px solid rgba(255,255,255,.18);
-    border-radius: 14px;
-    background: rgba(255,255,255,.10);
-    font-size: 13px;
-    line-height: 1.6;
-}
-
-.mensagem-acolhimento span {
-    font-size: 28px;
-}
-
 .painel-formulario {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 75px 9% 40px;
-    background: #191a28;
-    color: #fff;
+    align-items: flex-start;
+    padding: 35px 9% 50px;
+    background: #fff;
+    color: #173b68;
 }
 
 .conteudo-formulario {
@@ -898,12 +871,25 @@ body[data-theme="contraste"] .login-etiqueta {
 
 .conteudo-formulario h2 {
     font-size: 29px;
-    margin: 0 0 10px;
+    margin: 0 0 12px;
     color: inherit;
 }
 
+.titulo-caminho-recuperacao {
+    margin: 0 0 8px;
+    color: #2b557d;
+    font-size: 20px;
+}
+
+.mensagem-caminho-recuperacao {
+    margin: 0 0 12px;
+    color: #65748c;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
 .descricao-formulario {
-    color: #c2c5d5;
+    color: #65748c;
     font-size: 14px;
     line-height: 1.7;
     margin-bottom: 35px;
@@ -926,9 +912,9 @@ body[data-theme="contraste"] .login-etiqueta {
     gap: 12px;
     padding: 0 15px;
     min-height: 52px;
-    border: 1px solid #45465e;
+    border: 1px solid #dce2ed;
     border-radius: 11px;
-    background: #303144;
+    background: #f4f6fb;
 }
 
 .campo-com-icone span {
@@ -942,13 +928,13 @@ body[data-theme="contraste"] .login-etiqueta {
     border: none;
     outline: none;
     background: transparent;
-    color: #fff;
+    color: #173b68;
     font-family: inherit;
     font-size: 14px;
 }
 
 .campo-com-icone input::placeholder {
-    color: #a9aabd;
+    color: #8792a5;
 }
 
 .campo-com-icone:focus-within {
@@ -985,7 +971,7 @@ body[data-theme="contraste"] .login-etiqueta {
 
 .botao-voltar-login {
     border: 1px solid #43b9aa;
-    color: #54cbbd;
+    color: #25887e;
     background: transparent;
 }
 
@@ -1005,16 +991,16 @@ body[data-theme="contraste"] .login-etiqueta {
 
 .mensagem-formulario.erro {
     display: block;
-    background: rgba(239, 83, 80, .13);
+    background: #fff2f1;
     border: 1px solid #e66b6b;
-    color: #ffaaaa;
+    color: #a73d3a;
 }
 
 .mensagem-formulario.sucesso {
     display: block;
-    background: rgba(67, 185, 170, .14);
+    background: #eef9f7;
     border: 1px solid #43b9aa;
-    color: #80e5d8;
+    color: #25796c;
     font-size: 15px;
 }
 
@@ -1023,7 +1009,7 @@ body[data-theme="contraste"] .login-etiqueta {
     align-items: center;
     gap: 15px;
     margin: 25px 0;
-    color: #aaaabd;
+    color: #78849a;
     font-size: 11px;
     font-weight: 800;
 }
@@ -1033,14 +1019,14 @@ body[data-theme="contraste"] .login-etiqueta {
     content: "";
     flex: 1;
     height: 1px;
-    background: #414256;
+    background: #dce2ed;
 }
 
 .rodape-autenticacao,
 .aviso-demonstrativo {
     text-align: center;
     font-size: 11px;
-    color: #b5b7ca;
+    color: #65748c;
     margin-top: 30px;
 }
 
@@ -1049,105 +1035,35 @@ body[data-theme="contraste"] .login-etiqueta {
     font-size: 10px;
 }
 
-.controles-aparencia {
-    position: absolute;
-    top: 15px;
-    right: 25px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #c4c5d6;
-    font-size: 12px;
-}
-
-.botao-tema {
-    border: 1px solid #45465e;
-    border-radius: 50%;
-    width: 34px;
-    height: 34px;
-    background: #303144;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.botao-tema.ativo {
-    border-color: #43b9aa;
-    box-shadow: 0 0 0 2px rgba(67,185,170,.2);
-}
-
-/* TEMA CLARO */
-
-.pagina-recuperacao[data-tema="claro"] .painel-formulario {
-    background: #fff;
-    color: #173b68;
-}
-
-.pagina-recuperacao[data-tema="claro"] .descricao-formulario,
-.pagina-recuperacao[data-tema="claro"] .rodape-autenticacao,
-.pagina-recuperacao[data-tema="claro"] .aviso-demonstrativo {
-    color: #65748c;
-}
-
-.pagina-recuperacao[data-tema="claro"] .campo-com-icone {
-    background: #f4f6fb;
-    border-color: #dce2ed;
-}
-
-.pagina-recuperacao[data-tema="claro"] .campo-com-icone input {
-    color: #173b68;
-}
-
-.pagina-recuperacao[data-tema="claro"] .campo-com-icone input::placeholder {
-    color: #8792a5;
-}
-
-.pagina-recuperacao[data-tema="claro"] .divisor-acesso {
-    color: #78849a;
-}
-
-.pagina-recuperacao[data-tema="claro"] .divisor-acesso::before,
-.pagina-recuperacao[data-tema="claro"] .divisor-acesso::after {
-    background: #dce2ed;
-}
-
-.pagina-recuperacao[data-tema="claro"] .botao-tema {
-    background: #f1f4fa;
-    border-color: #dce2ed;
-}
-
 /* RESPONSIVIDADE */
 
 @media (max-width: 850px) {
-    .container-autenticacao {
-        grid-template-columns: 1fr;
-    }
-
-    .painel-apresentacao {
-        padding: 35px 8%;
-    }
-
-    .logo-recuperacao {
-        max-width: 230px;
-        margin-bottom: 20px;
-    }
-
-    .painel-apresentacao h1 {
-        font-size: 30px;
+    .cabecalho-recuperacao {
+        padding: 0 8%;
     }
 
     .painel-formulario {
-        padding: 85px 8% 40px;
-        min-height: 550px;
+        padding: 32px 8% 40px;
     }
 }
 
 @media (max-width: 480px) {
-    .painel-apresentacao {
-        padding: 28px 7%;
+    .cabecalho-recuperacao {
+        min-height: 98px;
+        padding: 0 7%;
+    }
+
+    .logo-recuperacao {
+        width: min(160px, 60vw);
+        height: min(98px, 56vw);
+    }
+
+    .container-autenticacao {
+        min-height: calc(100vh - 98px);
     }
 
     .painel-formulario {
-        padding: 80px 7% 35px;
+        padding: 28px 7% 35px;
     }
 
     .conteudo-formulario h2 {

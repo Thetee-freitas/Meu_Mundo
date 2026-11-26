@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacientes | Meu Mundo!</title>
+
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/paciente.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="pagina-profissional">
+    <div class="layout-profissional">
+
+        <aside class="sidebar-profissional">
+            <a href="inicio.html" class="marca-profissional">
+                <img src="../../assets/logo/logo_meu_mundo.png" alt="Meu Mundo!">
+                <span>Meu Mundo!</span>
+            </a>
+
+            <div class="perfil-sidebar">
+                <div class="avatar-profissional"><img src="../../assets/logo/profissional (1).png" alt=""></div>
+                <div>
+                    <strong id="nomePerfil">Profissional</strong>
+                    <small id="especialidadePerfil">Neurodesenvolvimento</small>
+                </div>
+            </div>
+
+            <nav class="menu-profissional">
+                <span class="menu-titulo">MENU PRINCIPAL</span>
+
+                <a href="inicio.html"> <span>⌂</span> Início</a>
+                <a href="pacientes.html" class="ativo"><span>♧</span> Pacientes</a>
+                <a href="agenda.html"><span>▦</span> Agenda</a>
+                <a href="acompanhamento.html"><span>♡</span> Acompanhamento</a>
+                <a href="atividades.html"><span>✎</span> Atividades</a>
+                <a href="relatorios.html"><span>▤</span> Relatórios</a>
+                <a href="responsaveis.html"><span>♙</span> Responsáveis</a>
+
+                <span class="menu-titulo menu-titulo-inferior">PREFERÊNCIAS</span>
+                <a href="configuracoes.html"><span>⚙</span> Configurações</a>
+            </nav>
+
+            <button class="botao-sair" id="botaoSair">
+                ↪ Sair da conta
+            </button>
+        </aside>
+
+        <main class="conteudo-profissional">
+
+            <header class="cabecalho-pacientes">
+                <div class="caminho-pagina">
+                    <span>Meu Mundo!</span>
+                    <span>/</span>
+                    <span>Profissional</span>
+                    <span>/</span>
+                    <strong>Pacientes</strong>
+                </div>
+
+                <div class="acoes-cabecalho">
+                    <button class="botao-notificacao" id="botaoNotificacao" aria-label="Notificações">♧</button>
+                    <div class="avatar-cabecalho"><img src="../../assets/logo/profissional (1).png" alt=""></div>
+                </div>
+            </header>
+
+            <section class="introducao-pacientes">
+                <div>
+                    <span class="etiqueta-pagina">ÁREA PROFISSIONAL</span>
+                    <h1>Meus pacientes</h1>
+                    <p>Organize os perfis e acompanhe cada jornada de desenvolvimento.</p>
+                </div>
+
+                <button class="botao-novo-paciente" id="botaoNovoPaciente">
+                    <span>＋</span> Novo paciente
+                </button>
+            </section>
+
+            <section class="indicadores-pacientes">
+                <article class="card-indicador">
+                    <div class="indicador-icone icone-azul">♧</div>
+                    <div>
+                        <span>Total de pacientes</span>
+                        <strong id="totalPacientes">0</strong>
+                        <small>Pacientes cadastrados</small>
+                    </div>
+                </article>
+
+                <article class="card-indicador">
+                    <div class="indicador-icone icone-verde">♡</div>
+                    <div>
+                        <span>Pacientes ativos</span>
+                        <strong id="pacientesAtivos">0</strong>
+                        <small>Em acompanhamento</small>
+                    </div>
+                </article>
+
+                <article class="card-indicador">
+                    <div class="indicador-icone icone-roxo">✧</div>
+                    <div>
+                        <span>Acompanhamento inicial</span>
+                        <strong id="pacientesIniciais">0</strong>
+                        <small>Em fase inicial</small>
+                    </div>
+                </article>
+            </section>
+
+            <section class="area-listagem-pacientes">
+                <div class="titulo-listagem">
+                    <div>
+                        <h2>Lista de pacientes</h2>
+                        <p>Consulte e gerencie os pacientes vinculados ao seu perfil.</p>
+                    </div>
+                </div>
+
+                <div class="filtros-pacientes">
+                    <div class="campo-busca">
+                        <span>⌕</span>
+                        <input type="search" id="campoBusca" placeholder="Buscar paciente pelo nome...">
+                    </div>
+
+                    <select id="filtroStatus" aria-label="Filtrar por situação">
+                        <option value="todos">Todos os pacientes</option>
+                        <option value="ativo">Ativos</option>
+                        <option value="inicial">Acompanhamento inicial</option>
+                        <option value="pausado">Pausados</option>
+                    </select>
+                </div>
+
+                <div class="tabela-responsiva">
+                    <table class="tabela-pacientes">
+                        <thead>
+                            <tr>
+                                <th>Paciente</th>
+                                <th>Idade</th>
+                                <th>Responsável</th>
+                                <th>Foco do acompanhamento</th>
+                                <th>Situação</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listaPacientes">
+                            <!-- Preenchido pelo JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mensagem-vazia" id="mensagemVazia" hidden>
+                    <span>♧</span>
+                    <h3>Nenhum paciente encontrado</h3>
+                    <p>Tente alterar a busca ou o filtro selecionado.</p>
+                </div>
+
+                <div class="rodape-listagem">
+                    <span id="contadorResultados">0 pacientes encontrados</span>
+                </div>
+            </section>
+
+            <footer class="rodape-profissional">
+                Meu Mundo! — Um espaço acolhedor para aprender e crescer.
+            </footer>
+        </main>
+    </div>
+
+    <!-- Modal de cadastro e edição -->
+    <div class="modal-fundo" id="modalPaciente" hidden>
+        <section class="modal-conteudo" role="dialog" aria-modal="true" aria-labelledby="tituloModal">
+            <div class="modal-cabecalho">
+                <div>
+                    <span class="etiqueta-pagina">DADOS DO PACIENTE</span>
+                    <h2 id="tituloModal">Novo paciente</h2>
+                    <p>Preencha as informações para cadastrar o paciente.</p>
+                </div>
+                <button type="button" class="fechar-modal" data-fechar-modal aria-label="Fechar">×</button>
+            </div>
+
+            <form id="formPaciente">
+                <input type="hidden" id="pacienteId">
+
+                <div class="campo-formulario">
+                    <label for="nomePaciente">Nome do paciente *</label>
+                    <input type="text" id="nomePaciente" required maxlength="100" placeholder="Digite o nome completo">
+                </div>
+
+                <div class="grade-formulario">
+                    <div class="campo-formulario">
+                        <label for="idadePaciente">Idade *</label>
+                        <input type="number" id="idadePaciente" min="1" max="120" required placeholder="Ex.: 8">
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="statusPaciente">Situação *</label>
+                        <select id="statusPaciente" required>
+                            <option value="ativo">Ativo</option>
+                            <option value="inicial">Acompanhamento inicial</option>
+                            <option value="pausado">Pausado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="responsavelPaciente">Responsável</label>
+                    <input type="text" id="responsavelPaciente" maxlength="100" placeholder="Nome do responsável">
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="focoPaciente">Foco do acompanhamento</label>
+                    <input type="text" id="focoPaciente" maxlength="120" placeholder="Ex.: Comunicação e autonomia">
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="observacoesPaciente">Observações</label>
+                    <textarea id="observacoesPaciente" rows="3" maxlength="500" placeholder="Informações gerais para a demonstração..."></textarea>
+                </div>
+
+                <div class="aviso-demonstracao">
+                    Este protótipo utiliza armazenamento local. Não insira informações clínicas ou dados pessoais reais.
+                </div>
+
+                <div class="acoes-modal">
+                    <button type="button" class="botao-secundario" data-fechar-modal>Cancelar</button>
+                    <button type="submit" class="botao-salvar">Salvar paciente</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <!-- Modal de detalhes -->
+    <div class="modal-fundo" id="modalDetalhes" hidden>
+        <section class="modal-conteudo modal-detalhes" role="dialog" aria-modal="true" aria-labelledby="tituloDetalhes">
+            <div class="modal-cabecalho">
+                <div>
+                    <span class="etiqueta-pagina">PERFIL DO PACIENTE</span>
+                    <h2 id="tituloDetalhes">Detalhes</h2>
+                </div>
+                <button type="button" class="fechar-modal" data-fechar-modal aria-label="Fechar">×</button>
+            </div>
+            <div id="conteudoDetalhes" class="conteudo-detalhes"></div>
+            <div class="acoes-modal">
+                <button type="button" class="botao-secundario" data-fechar-modal>Fechar</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="../../JS/pacientes.js"></script>
+</body>
+</html>

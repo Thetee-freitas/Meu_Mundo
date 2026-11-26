@@ -2,22 +2,22 @@
 const perfis = {
   crianca: {
     nome: "Criança",
-    icone: "🧸",
+    icone: '<img src="../../assets/logo/criancas.png" alt="">',
     descricao: "Escolha seu avatar para entrar no seu espaço de descobertas."
   },
   responsavel: {
     nome: "Responsável pela criança",
-    icone: "💛",
+    icone: '<img src="../../assets/logo/responsaveis (1).png" alt="">',
     descricao: "Acesse o painel de gerenciamento da criança e das autorizações."
   },
   profissional: {
     nome: "Profissional",
-    icone: "🩺",
+    icone: '<img src="../../assets/logo/profissional (1).png" alt="">',
     descricao: "Acesse o painel de acompanhamento dos usuários autorizados."
   },
   clinica: {
     nome: "Clínica",
-    icone: "🏥",
+    icone: '<img src="../../assets/logo/clinica (1).png" alt="">',
     descricao: "Acesse a administração da clínica e de sua equipe."
   },
 };
