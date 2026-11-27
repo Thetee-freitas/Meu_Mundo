@@ -16,37 +16,35 @@
     <link rel="stylesheet" href="../../css/responsavel.css">
 </head>
 
-<body class="pagina-responsavel">
+<body class="pagina-responsavel" data-perfil="responsavel">
 
 <div class="layout-responsavel">
 
-    <!-- MENU LATERAL -->
-    <aside class="sidebar-responsavel">
+    <!-- CABEÇALHO PRINCIPAL -->
+    <header class="sidebar-responsavel">
 
-        <a href="inicio.html" class="logo-responsavel">
+        <a href="index.html" class="logo-responsavel" aria-label="Página inicial">
             <img src="../../assets/logo/logo_meu_mundo.png"
                  alt="Logo Meu Mundo">
         </a>
 
-        <div class="identificacao-responsavel">
-            <div class="avatar-responsavel"><img src="../../assets/logo/responsaveis (1).png" alt=""></div>
-            <div>
-                <strong id="nomeResponsavel">Meu perfil</strong>
-                <small>Área do responsável</small>
-            </div>
+        <nav class="menu-responsavel" aria-label="Navegação do responsável">
+            <a href="#inicio" class="ativo">Início</a>
+            <a href="#rotina">Minha rotina</a>
+            <a href="#atividades">Atividades</a>
+            <a href="#emocoes">Emoções</a>
+        </nav>
+
+        <div class="acoes-cabecalho-responsavel">
+            <button type="button" class="perfil-cabecalho-responsavel" id="botaoPerfil">
+                👤 <span id="nomeResponsavel">Meu perfil</span>
+            </button>
+            <button type="button" class="sair-responsavel" id="botaoSair">
+                ↩ Sair
+            </button>
         </div>
 
-        <div class="mensagem-responsavel">
-            <span>🌈</span>
-            <strong>Cada conquista importa!</strong>
-            <small>Pequenos passos também representam grandes avanços.</small>
-        </div>
-
-        <button type="button" class="sair-responsavel" id="botaoSair">
-            ↩ Sair da plataforma
-        </button>
-
-    </aside>
+    </header>
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main class="conteudo-responsavel">
@@ -81,7 +79,7 @@
         </header>
 
         <!-- BOAS-VINDAS -->
-        <section class="boas-vindas-responsavel">
+        <section class="boas-vindas-responsavel" id="inicio">
 
             <div class="texto-boas-vindas">
 
@@ -106,7 +104,7 @@
         </section>
 
         <!-- CRIANÇA ACOMPANHADA -->
-        <section class="secao-crianca">
+        <section class="secao-crianca" id="crianca">
 
             <div class="titulo-responsavel">
                 <div>
@@ -114,7 +112,7 @@
                     <p>Perfil da criança vinculada à sua conta.</p>
                 </div>
 
-                <a href="filhos.html" class="link-responsavel">
+                <a href="#crianca" class="link-responsavel">
                     Ver perfil →
                 </a>
             </div>
@@ -135,7 +133,7 @@
                 </div>
 
                 <div class="acesso-crianca">
-                    <a href="filhos.html">Acessar perfil →</a>
+                    <a href="#crianca">Acessar perfil →</a>
                 </div>
 
             </article>
@@ -197,7 +195,7 @@
         <!-- ROTINA E EMOÇÕES -->
         <section class="grade-informacoes">
 
-            <article class="painel-informacao">
+            <article class="painel-informacao" id="rotina">
 
                 <div class="titulo-responsavel">
                     <div>
@@ -247,13 +245,13 @@
 
                 </div>
 
-                <a href="rotina.html" class="link-painel">
+                <a href="#rotina" class="link-painel">
                     Visualizar rotina completa →
                 </a>
 
             </article>
 
-            <article class="painel-informacao painel-emocoes">
+            <article class="painel-informacao painel-emocoes" id="emocoes">
 
                 <div class="titulo-responsavel">
                     <div>
@@ -276,7 +274,7 @@
                     e respeito.
                 </p>
 
-                <a href="emocoes.html" class="link-painel">
+                <a href="#emocoes" class="link-painel">
                     Ver registros emocionais →
                 </a>
 
@@ -285,7 +283,7 @@
         </section>
 
         <!-- CONQUISTAS -->
-        <section class="secao-conquistas">
+        <section class="secao-conquistas" id="atividades">
 
             <div class="conquista-texto">
                 <span class="etiqueta-responsavel">
@@ -299,7 +297,7 @@
                     e cada novo aprendizado.
                 </p>
 
-                <a href="atividades.html" class="link-conquista">
+                <a href="#atividades" class="link-conquista">
                     Ver atividades e conquistas →
                 </a>
             </div>
@@ -313,7 +311,7 @@
         </section>
 
         <!-- PROFISSIONAIS -->
-        <section class="painel-profissionais">
+        <section class="painel-profissionais" id="profissionais">
 
             <div class="titulo-responsavel">
                 <div>
@@ -333,7 +331,7 @@
                 <span class="autorizacao">Autorizado</span>
             </div>
 
-            <a href="profissionais.html" class="link-painel">
+            <a href="#profissionais" class="link-painel">
                 Consultar profissionais →
             </a>
 
@@ -348,6 +346,7 @@
 
 </div>
 
+<script src="../../JS/session.js"></script>
 <script src="../../JS/responsavel.js"></script>
 
 </body>

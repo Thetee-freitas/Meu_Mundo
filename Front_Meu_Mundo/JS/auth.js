@@ -3,6 +3,20 @@
    MEU MUNDO — AUTENTICAÇÃO DEMONSTRATIVA
 ========================================= */
 
+const destinosPorPerfil = {
+    crianca: "../crianca/index.html",
+    responsavel: "../responsavel/index.html",
+    profissional: "../profissional/index.html",
+    clinica: "../clinica/index.html"
+};
+
+const nomesPerfis = {
+    crianca: "Criança",
+    responsavel: "Responsável",
+    profissional: "Profissional",
+    clinica: "Clínica"
+};
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const formLogin = document.getElementById("formLogin");
@@ -14,18 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const manterConectado = document.getElementById("manterConectado");
     const botaoDemo = document.getElementById("botaoDemo");
     const perfilDemo = document.getElementById("perfilDemo");
-    const destinosPorPerfil = {
-        crianca: "index.html",
-        responsavel: "responsavel.html",
-        profissional: "profissional.html",
-        clinica: "clinica.html"
-    };
-    const nomesPerfis = {
-        crianca: "Criança",
-        responsavel: "Responsável",
-        profissional: "Profissional",
-        clinica: "Clínica"
-    };
     const perfilSolicitado = new URLSearchParams(window.location.search).get("perfil");
     const perfilSelecionado = Object.prototype.hasOwnProperty.call(
         destinosPorPerfil,
@@ -75,6 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     });
+
+    if (!formLogin) return;
 
     // =====================================
     // MOSTRAR OU OCULTAR SENHA
@@ -239,6 +243,52 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const formulario = document.getElementById("formRecuperarSenha");
+
+    if (!formulario) return;
+
+    const campoEmail = document.getElementById("emailRecuperacao");
+    const mensagem = document.getElementById("mensagemRecuperacao");
+
+    formulario.addEventListener("submit", evento => {
+        evento.preventDefault();
+
+        const email = campoEmail.value.trim().toLowerCase();
+
+        if (!email || !campoEmail.validity.valid) {
+            mensagem.textContent = "Digite um e-mail válido.";
+            mensagem.className = "mensagem-formulario erro";
+            campoEmail.focus();
+            return;
+        }
+
+        let usuarios;
+
+        try {
+            usuarios = JSON.parse(localStorage.getItem("meuMundoUsuarios") || "[]");
+
+            if (!Array.isArray(usuarios)) {
+                throw new Error("Os dados de contas não estão em uma lista válida.");
+            }
+        } catch (erro) {
+            console.error("Não foi possível consultar os cadastros demonstrativos.", erro);
+            mensagem.textContent = "Não foi possível verificar os cadastros neste navegador.";
+            mensagem.className = "mensagem-formulario erro";
+            return;
+        }
+
+        const contaEncontrada = usuarios.some(usuario =>
+            usuario.email?.toLowerCase() === email
+        );
+
+        mensagem.textContent = contaEncontrada
+            ? "Encontramos esse e-mail. O envio de redefinição será disponibilizado quando houver um backend."
+            : "Não encontramos um cadastro com esse e-mail.";
+        mensagem.className = `mensagem-formulario ${contaEncontrada ? "sucesso" : "erro"}`;
+    });
 });
 
 
@@ -444,6 +494,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 JSON.stringify(usuarios)
             );
 
+            sessionStorage.setItem(
+                "meuMundoSessao",
+                JSON.stringify({
+                    nome: nome || apelido,
+                    email,
+                    perfil,
+                    inicio: new Date().toISOString()
+                })
+            );
+
             exibirMensagem(
                 "Sua conta foi criada com sucesso! 🌈 Redirecionando para o Meu Mundo.",
                 "sucesso"
@@ -456,7 +516,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Redirecionar para a página inicial
             setTimeout(function () {
 
-                window.location.href = "index.html";
+                window.location.href = destinosPorPerfil[perfil];
 
             }, 1800);
 

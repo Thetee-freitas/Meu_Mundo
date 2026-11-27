@@ -79,6 +79,23 @@
     background: #DCEBFA;
 }
 
+.botao-sair-crianca {
+    border: none;
+    background: #FBE9E7;
+    color: #8F352D;
+    padding: 12px 20px;
+    border-radius: var(--raio-total);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.botao-sair-crianca:hover {
+    background: #F4D6D2;
+}
+
 /* CONTEÚDO PRINCIPAL */
 
 main {
@@ -436,7 +453,8 @@ main {
         height: min(98px, 56vw);
     }
 
-    .botao-perfil {
+    .botao-perfil,
+    .botao-sair-crianca {
         padding: 10px 13px;
     }
 

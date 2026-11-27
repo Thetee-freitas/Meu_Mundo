@@ -39,6 +39,19 @@ function salvarDados() {
 
 const botaoComecar = document.getElementById('botaoComecar');
 const botaoPerfil = document.querySelector('.botao-perfil');
+const botaoSair = document.getElementById('botaoSair');
+
+if (botaoSair) {
+    botaoSair.addEventListener('click', () => {
+        const confirmar = confirm('Deseja realmente sair do Meu Mundo?');
+
+        if (confirmar) {
+            localStorage.removeItem('meuMundoSessao');
+            sessionStorage.removeItem('meuMundoSessao');
+            window.location.href = '../acesso/login.html';
+        }
+    });
+}
 
 // =========================================
 // 3. CRIAR JANELA DE INTERAÇÃO

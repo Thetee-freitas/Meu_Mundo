@@ -175,6 +175,99 @@
     color: #cc5c65;
 }
 
+/* CABEÇALHO HORIZONTAL PADRONIZADO */
+.layout-clinica {
+    flex-direction: column;
+}
+
+.sidebar-clinica {
+    width: 100%;
+    min-width: 0;
+    min-height: 92px;
+    padding: 0 7%;
+    border-right: none;
+    border-bottom: 1px solid #e6eaf2;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    box-shadow: 0 3px 12px rgba(23, 79, 134, 0.06);
+}
+
+.marca-clinica {
+    width: 160px;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.marca-clinica img {
+    width: 160px;
+    height: 92px;
+    transform: scale(1.08);
+}
+
+.menu-clinica {
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu-clinica a {
+    color: #263b52;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.menu-clinica a:hover,
+.menu-clinica a.ativo {
+    color: #174f86;
+}
+
+.acoes-cabecalho-clinica {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.perfil-cabecalho-clinica,
+.botao-sair {
+    min-height: 44px;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-family: inherit;
+    font-weight: 800;
+}
+
+.perfil-cabecalho-clinica {
+    background: #eaf3ff;
+    color: #174f86;
+}
+
+.botao-sair {
+    margin-top: 0;
+    background: #fbe9e7;
+    color: #8f352d;
+    border: none;
+}
+
+.identificacao-clinica,
+.ajuda-clinica {
+    display: none;
+}
+
+.conteudo-clinica {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+}
+
+.topbar-clinica {
+    display: none;
+}
+
 /* CONTEÚDO */
 
 .conteudo-clinica {
@@ -533,9 +626,15 @@
     }
 
     .identificacao-clinica,
-    .ajuda-clinica,
-    .botao-sair {
+    .ajuda-clinica {
         display: none;
+    }
+
+    .botao-sair {
+        display: block;
+        width: 100%;
+        min-height: 44px;
+        margin-top: 12px;
     }
 
     .menu-clinica {
@@ -568,6 +667,45 @@
 
     .ilustracao-clinica {
         display: none;
+    }
+
+    .sidebar-clinica {
+        min-height: 0;
+        flex-wrap: wrap;
+        padding: 10px 12px;
+    }
+
+    .marca-clinica,
+    .marca-clinica img {
+        width: 110px;
+        height: 68px;
+    }
+
+    .menu-clinica {
+        order: 3;
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        gap: 4px;
+        overflow-x: auto;
+    }
+
+    .menu-clinica a {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .acoes-cabecalho-clinica {
+        gap: 6px;
+    }
+
+    .perfil-cabecalho-clinica,
+    .botao-sair {
+        width: auto;
+        min-height: 40px;
+        margin-top: 0;
+        padding: 8px 10px;
+        font-size: 12px;
     }
 }
 

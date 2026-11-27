@@ -376,6 +376,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const confirmar = confirm("Deseja realmente sair da sua conta?");
 
         if (confirmar) {
+            localStorage.removeItem("meuMundoSessao");
+            sessionStorage.removeItem("meuMundoSessao");
             window.location.href = "../acesso/login.html";
         }
     });

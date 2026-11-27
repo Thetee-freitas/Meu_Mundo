@@ -82,6 +82,8 @@ document.addEventListener("DOMContentLoaded", () => {
             );
 
             if (confirmar) {
+                localStorage.removeItem("meuMundoSessao");
+                sessionStorage.removeItem("meuMundoSessao");
                 window.location.href = "../acesso/login.html";
             }
         });

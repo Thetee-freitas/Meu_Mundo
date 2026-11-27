@@ -17,37 +17,35 @@
     <link rel="stylesheet" href="../../css/profissional.css">
 </head>
 
-<body class="pagina-profissional">
+<body class="pagina-profissional" data-perfil="profissional">
 
 <div class="layout-profissional">
 
-    <!-- MENU LATERAL -->
-    <aside class="sidebar-profissional">
+    <!-- CABEÇALHO PRINCIPAL -->
+    <header class="sidebar-profissional">
 
-        <a href="inicio.html" class="logo-profissional">
+        <a href="index.html" class="logo-profissional" aria-label="Página inicial">
             <img src="../../assets/logo/logo_meu_mundo.png"
                  alt="Logo Meu Mundo">
         </a>
 
-        <div class="identificacao-profissional">
-            <div class="avatar-profissional"><img src="../../assets/logo/profissional (1).png" alt=""></div>
+        <nav class="menu-profissional" aria-label="Navegação profissional">
+            <a href="#inicio" class="ativo">Início</a>
+            <a href="#pacientes">Pacientes</a>
+            <a href="#agenda">Agenda</a>
+            <a href="#atividades">Atividades</a>
+        </nav>
 
-            <div>
-                <strong id="nomeProfissional">Meu perfil</strong>
-                <small>Área profissional</small>
-            </div>
-
-        <div class="mensagem-profissional">
-            <span>💜</span>
-            <strong>Seu trabalho transforma!</strong>
-            <small>Cada pessoa aprende e se desenvolve no seu próprio ritmo.</small>
+        <div class="acoes-cabecalho-profissional">
+            <button type="button" class="perfil-cabecalho-profissional" id="botaoPerfil">
+                👤 <span id="nomeProfissional">Meu perfil</span>
+            </button>
+            <button type="button" class="sair-profissional" id="botaoSair">
+                ↩ Sair
+            </button>
         </div>
 
-        <button type="button" class="sair-profissional" id="botaoSair">
-            ↩ Sair da plataforma
-        </button>
-
-    </aside>
+    </header>
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main class="conteudo-profissional">
@@ -88,7 +86,7 @@
         </header>
 
         <!-- BOAS-VINDAS -->
-        <section class="boas-vindas-profissional">
+        <section class="boas-vindas-profissional" id="inicio">
 
             <div class="texto-boas-vindas">
 
@@ -112,10 +110,10 @@
         </section>
 
         <!-- INDICADORES -->
-        <section class="secao-indicadores">
+        <section class="secao-indicadores" id="secao-indicadores">
 
             <div class="titulo-profissional">
-                <div>
+                <div id="perfil">
                     <h2>Resumo profissional</h2>
                     <p>Visualize os principais indicadores do seu espaço.</p>
                 </div>
@@ -167,7 +165,7 @@
         <section class="grade-profissional">
 
             <!-- AGENDA -->
-            <article class="painel-profissional">
+            <article class="painel-profissional" id="agenda">
 
                 <div class="titulo-profissional">
                     <div>
@@ -246,14 +244,14 @@
 
                 </div>
 
-                <a href="agenda.html" class="link-profissional">
+                <a href="#agenda" class="link-profissional">
                     Visualizar agenda completa →
                 </a>
 
             </article>
 
             <!-- PACIENTES RECENTES -->
-            <article class="painel-profissional">
+            <article class="painel-profissional" id="pacientes">
 
                 <div class="titulo-profissional">
                     <div>
@@ -306,7 +304,7 @@
         <!-- ATIVIDADES E ACOMPANHAMENTO -->
         <section class="grade-profissional grade-inferior">
 
-            <article class="painel-profissional">
+            <article class="painel-profissional" id="atividades">
 
                 <div class="titulo-profissional">
                     <div>
@@ -343,13 +341,13 @@
                     <span class="atividade-status">Disponível</span>
                 </div>
 
-                <a href="atividades.html" class="link-profissional">
+                <a href="#atividades" class="link-profissional">
                     Explorar atividades →
                 </a>
 
             </article>
 
-            <article class="painel-profissional painel-registros">
+            <article class="painel-profissional painel-registros" id="acompanhamento">
 
                 <div class="titulo-profissional">
                     <div>
@@ -377,7 +375,7 @@
                     </div>
                 </div>
 
-                <a href="acompanhamento.html" class="link-profissional">
+                <a href="#acompanhamento" class="link-profissional">
                     Ver acompanhamentos →
                 </a>
 
@@ -407,6 +405,7 @@
 
 </div>
 
+<script src="../../JS/session.js"></script>
 <script src="../../JS/profissional.js"></script>
 
 </body>
