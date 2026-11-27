@@ -14,6 +14,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const manterConectado = document.getElementById("manterConectado");
     const botaoDemo = document.getElementById("botaoDemo");
     const perfilDemo = document.getElementById("perfilDemo");
+    const destinosPorPerfil = {
+        crianca: "index.html",
+        adulto: "index.html",
+        responsavel: "responsavel.html",
+        profissional: "profissional.html",
+        clinica: "clinica.html"
+    };
+    const nomesPerfis = {
+        crianca: "Criança",
+        adulto: "Adulto neurodivergente",
+        responsavel: "Responsável",
+        profissional: "Profissional",
+        clinica: "Clínica"
+    };
+    const perfilSolicitado = new URLSearchParams(window.location.search).get("perfil");
+    const perfilSelecionado = Object.prototype.hasOwnProperty.call(
+        destinosPorPerfil,
+        perfilSolicitado
+    ) ? perfilSolicitado : null;
+
+    if (perfilSelecionado) {
+        perfilDemo.value = perfilSelecionado;
+    }
 
     // =====================================
     // TEMAS VISUAIS
@@ -116,11 +139,25 @@ document.addEventListener("DOMContentLoaded", () => {
     // =====================================
 
     function iniciarSessao(usuario) {
+        const perfil = usuario.perfil || "adulto";
+        const destino = destinosPorPerfil[perfil];
+
+        if (!destino) {
+            exibirMensagem("O perfil desta conta não é reconhecido.");
+            return;
+        }
+
+        if (perfilSelecionado && perfil !== perfilSelecionado) {
+            exibirMensagem(
+                `Esta conta está cadastrada como ${nomesPerfis[perfil]}. Selecione esse perfil para continuar.`
+            );
+            return;
+        }
 
         const sessao = {
             nome: usuario.nome || usuario.apelido || "Usuário",
             email: usuario.email || "",
-            perfil: usuario.perfil || "adulto",
+            perfil,
             inicio: new Date().toISOString()
         };
 
@@ -133,12 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
             JSON.stringify(sessao)
         );
 
-        // Nesta primeira etapa, todos os perfis
-        // utilizam a página inicial já existente.
-        // Os direcionamentos individuais serão
-        // implementados quando os painéis estiverem prontos.
-
-        window.location.href = "../../Html/index.html";
+        window.location.href = destino;
 
     }
 
@@ -416,7 +448,7 @@ document.addEventListener("DOMContentLoaded", function () {
             );
 
             exibirMensagem(
-                "Sua conta foi criada com sucesso! 🌈 Você já pode entrar no Meu Mundo.",
+                "Sua conta foi criada com sucesso! 🌈 Redirecionando para o Meu Mundo.",
                 "sucesso"
             );
 
@@ -424,10 +456,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             botaoCadastrar.textContent = "Cadastro realizado! ✓";
 
-            // Redirecionar para o login
+            // Redirecionar para a página inicial
             setTimeout(function () {
 
-                window.location.href = "login.html";
+                window.location.href = "index.html";
 
             }, 1800);
 
