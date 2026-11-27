@@ -16,14 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const perfilDemo = document.getElementById("perfilDemo");
     const destinosPorPerfil = {
         crianca: "index.html",
-        adulto: "index.html",
         responsavel: "responsavel.html",
         profissional: "profissional.html",
         clinica: "clinica.html"
     };
     const nomesPerfis = {
         crianca: "Criança",
-        adulto: "Adulto neurodivergente",
         responsavel: "Responsável",
         profissional: "Profissional",
         clinica: "Clínica"
@@ -139,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // =====================================
 
     function iniciarSessao(usuario) {
-        const perfil = usuario.perfil || "adulto";
+        const perfil = usuario.perfil;
         const destino = destinosPorPerfil[perfil];
 
         if (!destino) {
@@ -224,7 +222,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const perfis = {
             crianca: "Criança",
-            adulto: "Adulto neurodivergente",
             responsavel: "Responsável",
             profissional: "Profissional",
             clinica: "Clínica"
